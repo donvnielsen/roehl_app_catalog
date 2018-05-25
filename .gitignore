@@ -1,0 +1,11 @@
+.git
+.idea
+db
+logs
+scripts
+spec/data
+pkg
+*.tmp
+*.bak
+*.sln
+*.csproj

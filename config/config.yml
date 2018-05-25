@@ -1,0 +1,9 @@
+dev: &dev
+  datadir: spec/data/dockhours
+  dbdir: db
+development: *dev
+
+test: &test
+  datadir: spec/data/dockhours
+  dbdir: db
+
