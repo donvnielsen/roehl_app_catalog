@@ -1,6 +1,6 @@
 .git
 .idea
-db
+*.db
 logs
 scripts
 spec/data
