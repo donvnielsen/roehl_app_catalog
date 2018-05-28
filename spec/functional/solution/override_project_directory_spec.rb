@@ -10,7 +10,7 @@ describe SolutionFile do
   end
 
   it 'should should override project file directory' do
-    odir = File.join(SPEC_DIR,'data','dockhours','projects')
+    odir = File.join(SPEC_DATA_DIR, 'dockhours', 'projects')
     @sf.create_solution_projects(odir)
     expect(Project.last.dir_name).to eq(odir)
   end

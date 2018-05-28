@@ -1,7 +1,7 @@
 .git
 .idea
 *.db
-logs
+logs/*.log
 scripts
 spec/data
 pkg

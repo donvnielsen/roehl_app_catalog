@@ -52,7 +52,7 @@ describe CsprojFile do
       expect(@csproj.guid).to eq(@guid)
     end
     it 'should load the embedded project names' do
-      expect(@csproj.projects.size).to eq(6)
+      expect(@csproj.ref_projects.size).to eq(6)
     end
 
   end
@@ -62,11 +62,11 @@ describe CsprojFile do
       DatabaseCleaner.clean
     end
     it 'should create a project if it does not exist' do
-      CsprojFile.new(TEST_PROJECT_FILE,@guid,0)
+      CsprojFile.new(TEST_PROJECT_FILE, @guid, 0)
       expect(Project.count).to eq(1)
     end
     it 'should find an existing project' do
-      expect{CsprojFile.new(TEST_PROJECT_FILE,@guid,0)}.to_not raise_error
+      expect{CsprojFile.new(TEST_PROJECT_FILE, @guid, 0)}.to_not raise_error
       expect(Project.count).to eq(1)
     end
   end
@@ -74,11 +74,11 @@ describe CsprojFile do
   context 'Ensure all projects references identified' do
     before(:all) do
       DatabaseCleaner.clean
-      @csproj = CsprojFile.new(TEST_PROJECT_FILE,@guid,0)
+      @csproj = CsprojFile.new(TEST_PROJECT_FILE, @guid, 0)
     end
 
     it 'should create project to project references' do
-      @csproj.recurse_projects(File.join(File.join(SPEC_DIR,'data','dockhours','projects')))
+      @csproj.recurse_projects(File.join(File.join(SPEC_DATA_DIR,'dockhours', 'projects')))
       expect(Project.count).to eq(8)
     end
     # it 'should extract project references from csproj file' do

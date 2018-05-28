@@ -4,7 +4,7 @@ require_relative '../../../classes/solution_file'
 describe SolutionFile do
   let(:projects) {
     # $projects = SolutionFile.parse_projects_from_file(
-    #     File.readlines(File.join(SPEC_DIR,'data','dockhours','solutions','RTIAzmanWS.sln')).map {|ln| ln.chomp}
+    #     File.readlines(File.join(SPEC_DATA_DIR,'dockhours','solutions','RTIAzmanWS.sln')).map {|ln| ln.chomp}
     $projects = SolutionFile.parse_projects_from_file(
         File.readlines(TEST_SOLUTION_FILE).map {|ln| ln.chomp}
     )

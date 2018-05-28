@@ -7,7 +7,6 @@ describe SolutionFile::ProjectAttributes do
     before(:all) do
       o = 'Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Roehl", "Roehl.sqlproj", "{14D5AC93-8674-4D83-BAA6-D71E4B18CD42}"'
       @pa = SolutionFile::ProjectAttributes.new(o)
-      pp @pa
     end
     it 'should recognize complex file name' do
       expect(@pa.is_a?(SolutionFile::ProjectAttributes)).to be_truthy

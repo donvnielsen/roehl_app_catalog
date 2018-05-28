@@ -6,7 +6,7 @@ require_relative '../app/models/project'
 require_relative '../app/models/project_project_index'
 
 class CsprojFile
-  attr_reader :idx,:guid,:fname,:projects,:prj
+  attr_reader :idx, :guid, :fname, :ref_projects, :prj
 
   def self.parse_project_reference(ref)
     raise ArgumentError unless ref.is_a?(Nokogiri::XML::Element)
@@ -25,28 +25,31 @@ class CsprojFile
   def initialize(fname,guid,index=0)
     raise ArgumentError,'File name must be provided' if fname.nil?
     raise ArgumentError,'Guid must be provided' if guid.nil?
-    raise ArgumentError,'Index must be not nill and 0 or greater' if index.nil? || index < 0
+    raise ArgumentError,'Index must be not nil and 0 or greater' if index.nil? || index < 0
     @fname = fname
     @guid = guid
     @idx = index + 1
 
-    # determine if the project exists. if it does not,
-    # then create one in the db
-    if (@prj = Project.find_by_guid(guid)).nil?
-      Project.create( guid:guid, file_name:fname )
+    # create new project in the db if it does not already
+    @prj = Project.find_by_guid(guid)
+    if @prj.nil?
+      @prj = Project.create( guid:guid, file_name:fname )
     else
+      # set the csproj_file when it is nil. this could happen if a prior project
+      # reference did not contain a file specification for the csproj file.
       if @prj.csproj_file.nil?
         @prj.file_name = fname
         @prj.save!
       end
     end
+
     load_projects
   end
 
   # load the specified csproj file
   def load_projects
     # raise ArgumentError, "Bad file name #{self.fname}" unless File.exist?(self.fname)
-    @projects = []
+    @ref_projects = []
     if File.exist?(self.fname)
       File.open(self.fname) {|f|
         doc = Nokogiri::XML(f) {|config| config.noblanks}
@@ -60,20 +63,27 @@ class CsprojFile
           projectreferences = g.xpath('xmlns:ProjectReference')
           unless projectreferences.nil? || projectreferences.count == 0
             projectreferences.each {|prjref|
-              @projects << CsprojFile.parse_project_reference(prjref)
+              @ref_projects << CsprojFile.parse_project_reference(prjref)
             }
           end
         }
       }
     end
-    @projects
+    @ref_projects
 
   end
 
+  # when the number of project references is greater than zero,
+  # the recurse each one...looking into their project references.
+  # eventually you reach projects that have no project references.
+  # @param ovr string directory name override
   def recurse_projects(ovr=nil)
-    if @projects.size > 0
-      @projects.count.times {|i|
-        prj = @projects.shift
+    if @ref_projects.size > 0
+      @ref_projects.count.times {|i|
+        prj = @ref_projects.shift
+
+        # this reference can be skipped if there is already an established
+        # project with project references. It has already been recursed
         if (p=Project.find_by_guid(prj[:guid]))
           if ProjectProject.find_by_project_id(p.nil? ? -1 : p.id)
             LOGGER.debug(indent + prj[:name] + ' already logged') if LOGGER.debug?
@@ -82,11 +92,15 @@ class CsprojFile
         end
         LOGGER.debug(indent + prj[:name]) if LOGGER.debug?
 
-        fname = ovr.nil? ?
-                    prj[:file_name] :
-                    File.join(ovr,File.basename(prj[:file_name]))
-        csproj = CsprojFile.new(fname,prj[:guid],@idx)
+        # replace the projects directory name with the override directory when specified
+        fname = ovr.nil? ? prj[:file_name] : File.join(ovr, File.basename(prj[:file_name]))
+
+        csproj = CsprojFile.new(fname, prj[:guid], @idx)
         csproj.recurse_projects(ovr)
+
+        # when returning from a recursion, create a reference from this
+        # project to the referenced project. It is a quiet create, meaning
+        # an exception is not thrown if the reference already exists
         begin
           ProjectProject.create(
               project_id:self.prj.id,

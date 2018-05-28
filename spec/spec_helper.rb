@@ -10,9 +10,11 @@ require 'pp'
 ENV['RAILS_ENV'] = 'dev'
 require_relative '../config/environment'
 
-TEST_SLNPRJ_DIR = File.join(SPEC_DIR,'data')
-TEST_SOLUTION_FILE = File.join(TEST_SLNPRJ_DIR,'spec_test_solution.sln')
-TEST_PROJECT_FILE  = File.join(TEST_SLNPRJ_DIR,'spec_test_project.csproj')
+SPEC_DATA_DIR = '/home/dvn/Documents/roehl_app_catalog_test_data'
+BUILDMGR_DIR = File.join(SPEC_DATA_DIR,'build_manager')
+# TEST_SLNPRJ_DIR = File.join(SPEC_DATA_DIR)
+TEST_SOLUTION_FILE = File.join(SPEC_DATA_DIR,'spec_test_solution.sln')
+TEST_PROJECT_FILE  = File.join(SPEC_DATA_DIR,'spec_test_project.csproj')
 
 # SPEC_LOG_FILE = File.join(SPEC_DIR, 'logs', 'test.log')
 SPEC_LOG_FILE = StringIO.new

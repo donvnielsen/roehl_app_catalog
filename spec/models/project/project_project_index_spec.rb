@@ -53,8 +53,8 @@ describe ProjectProject do
   context 'create project project references' do
     before(:all) do
       DatabaseCleaner.clean
-      CsprojFile.new(TEST_PROJECT_FILE,'PrjPrj Ref').
-          recurse_projects(File.join(SPEC_DIR,'data','dockhours','projects'))
+      csproj = CsprojFile.new(TEST_PROJECT_FILE,'PrjPrj Ref')
+      csproj.recurse_projects(File.join(SPEC_DATA_DIR,'dockhours','projects'))
     end
     it 'should create the projects' do
       expect(Project.count).to eq(8)
@@ -83,8 +83,8 @@ describe ProjectProject do
     end
 
     it 'should have GPUtility recursed refereces' do
-      csproj_id = Project.find_by_name('RTIGPUtility').id
-      ['RTIFrameworkV2.0'].each {|name| test_prj_prj_ref(csproj_id,name) }
+      prj = Project.find_by_name('RTIGPUtility')
+      ['RTIFrameworkV2.0'].each {|name| test_prj_prj_ref(prj.id,name) }
     end
   end
 end
