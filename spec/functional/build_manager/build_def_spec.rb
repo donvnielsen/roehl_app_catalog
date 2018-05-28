@@ -1,9 +1,11 @@
 require 'spec_helper'
 require_relative '../../../classes/build_manager/build_def'
 
+BUILDMGR_DATA_DIR = File.join(SPEC_DATA_DIR,'build_manager')
+
 describe BuildDef do
   before(:all) do
-    fname = File.join(BUILDMGR_DIR,'simple_builds.xml')
+    fname = File.join(BUILDMGR_DATA_DIR,'simple_builds.xml')
     @doc = File.open(fname) {|f| Nokogiri::XML(f) }
     @buildmgr = @doc.xpath('xmlns:BuildManagerData')
   end

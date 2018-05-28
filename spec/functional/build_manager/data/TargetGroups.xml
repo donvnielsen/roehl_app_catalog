@@ -1,0 +1,2922 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TargetGroupsData xmlns="http://tempuri.org/TargetGroupsData.xsd">
+  <!--
+  ========================================================================
+  This HA Build Manager - Start
+  ========================================================================
+  -->
+
+  <Group>
+    <GroupName>RTIWebApp/RTIPortal - QA To Transition</GroupName>
+    <TargetNameFriendly>Backup RTIWebApp Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Transition - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp QA To Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Transition - WS3</TargetNameFriendly>
+
+    <TargetNameFriendly>RTIPortal QA To Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp QA To Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Transition - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>RTIPortal QA To Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWebApp/RTIPortal - Transition To Production</GroupName>
+    <TargetNameFriendly>Backup RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Production - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp Tran To Prod - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Portal Tran To Prod - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp Tran To Prod - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Portal Tran To Prod - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Merge RTIWebApp Production</TargetNameFriendly>
+    <TargetNameFriendly>Checkin RTIWebApp Production</TargetNameFriendly>
+
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIWebApp - Transition To Production</GroupName>
+    <TargetNameFriendly>Backup RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp Production - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp Tran To Prod - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>WebApp Tran To Prod - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Merge RTIWebApp Production</TargetNameFriendly>
+    <TargetNameFriendly>Checkin RTIWebApp Production</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTIPortal - Transition To Production</GroupName>
+    <TargetNameFriendly>Backup RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Production - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Portal Tran To Prod - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Portal Tran To Prod - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Merge RTIWebApp Production</TargetNameFriendly>
+    <TargetNameFriendly>Checkin RTIWebApp Production</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTIWebApp - Patch Transition</GroupName>
+    <TargetNameFriendly>Get Latest TRANSITION</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWebApp TRANSITION</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIWebApp Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp Transition - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWebApp Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWebApp Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Transition - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPortal - Patch Transition</GroupName>
+    <TargetNameFriendly>Get Latest TRANSITION</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPortal TRANSITION</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIPortal Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Transition - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPortal Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Transition - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPortal Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Transition - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWebApp - Patch Production</GroupName>
+    <TargetNameFriendly>Get Latest PRODUCTION</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWebApp PRODUCTION</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp Production - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWebApp Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIWebApp Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPortal - Patch Production</GroupName>
+    <TargetNameFriendly>Get Latest PRODUCTION</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPortal PRODUCTION</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal Production - WS4</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPortal Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Test RTIPortal Production - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+  </Group>
+
+  <!--
+  ========================================================================
+  This HA Build Manager - End
+  ========================================================================
+  -->
+
+  <Group>
+    <GroupName>RTIWebApp/RTIPortal - Dev To QA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWebAppNew</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPortal QA</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWebApp QA</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWebApp QA</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPortal QA</TargetNameFriendly>
+    <TargetNameFriendly>Merge RTIWebApp Transition</TargetNameFriendly>
+    <TargetNameFriendly>Checkin RTIWebApp Transition</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIBillingAutoBillProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIBillingAutoBillProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBillingAutoBillProcess - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBillingAutoBillProcess - AN02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBillingAutoBillProcess - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBillingAutoBillProcess - AN02</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>CityMasterPopulate</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build CityMasterPopulate</TargetNameFriendly>
+    <TargetNameFriendly>Backup CityMasterPopulate - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Backup CityMasterPopulate - AN02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CityMasterPopulate - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CityMasterPopulate - AN02</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>ImagingSendFile</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ImagingSendFile</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingSendFile</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingSendFile AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingSendFile AN2</TargetNameFriendly>
+
+  </Group>
+  <Group>
+    <GroupName>BiztalkEDIBatchProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build BiztalkEDIBatchProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup BiztalkEDIBatchProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup BiztalkEDIBatchProcess - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy BiztalkEDIBatchProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy BiztalkEDIBatchProcess - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>Biztalk_WebServices_EBusiness</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>    
+    <TargetNameFriendly>Build Biztalk_WebServices_EBusiness</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup Biztalk_WebServices_EBusiness - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup Biztalk_WebServices_EBusiness - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy Biztalk_WebServices_EBusiness - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy Biztalk_WebServices_EBusiness - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIHomeTimeSystem</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build HomeTimeSystem</TargetNameFriendly>
+    <TargetNameFriendly>Backup HomeTimeSystem - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup HomeTimeSystem - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy HomeTimeSystem - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy HomeTimeSystem - AN2</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIEventBackgroundService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEventBackgroundService</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q1 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q2 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q3 - AN1</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q1 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q2 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventBackgroundService - Q3 - AN2</TargetNameFriendly>
+    
+    <TargetNameFriendly>Stop Cluster Resource (RTIEventBackgroundService Q1)</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIEventBackgroundService Q2)</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIEventBackgroundService Q3)</TargetNameFriendly>
+    
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q1 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q2 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q3 - AN1</TargetNameFriendly>
+    
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q1 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q2 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventBackgroundService - Q3 - AN2</TargetNameFriendly>
+    
+    <TargetNameFriendly>Start Cluster Resource (RTIEventBackgroundService Q1)</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIEventBackgroundService Q2)</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIEventBackgroundService Q3)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIOMBackgroundService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    
+    <TargetNameFriendly>Build RTIOMBackgroundService</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q1 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q2 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q3 - AN1</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q1 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q2 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOMBackgroundService - Q3 - AN2</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIOMBackgroundService Q1)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q1 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q1 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIOMBackgroundService Q1)</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIOMBackgroundService Q2)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q2 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q2 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIOMBackgroundService Q2)</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIOMBackgroundService Q3)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q3 - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMBackgroundService - Q3 - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIOMBackgroundService Q3)</TargetNameFriendly>
+    
+  </Group>
+
+  <Group>
+    <GroupName>RTIReplicationDataQueue</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>BuildRTIReplicationDataQueue</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIReplicationDataQueue</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIReplicationDataQueue AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplicationDataQueue AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIReplicationDataQueue AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplicationDataQueue AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIReplicationDataQueue</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIReplicationDataQueueEvents</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>BuildRTIReplicationDataQueueEvents</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIReplicationDataQueueEvents</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIReplicationDataQueueEvents AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplicationDataQueueEvents AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIReplicationDataQueueEvents AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplicationDataQueueEvents AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIReplicationDataQueueEvents</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEventProcessPositionService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEventProcessPositionService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventProcessPositionService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIEventProcessPositionService</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventProcessPositionService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventProcessPositionService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIEventProcessPositionService</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEventProcessMessage</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEventProcessMessage</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventProcessMessage MFDAN0001</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventProcessMessage MFDAN0002</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIEventProcessMessage</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventProcessMessage - MFDAN0001</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventProcessMessage - MFDAN0002</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIEventProcessMessage</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIBillingWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIBillingWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBillingWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBillingWS - WA2</TargetNameFriendly>
+    
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBillingWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBillingWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>EmployeeSecurityWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build EmployeeSecurityWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup EmployeeSecurityWS RTISecurity1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EmployeeSecurityWS - RTISecurity1</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIOrderEntryWS HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOrderEntryWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOrderEntryWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOrderEntryWS WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderEntryWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderEntryWS WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTICommunicationApplicationWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICommunicationApplicationWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationApplicationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationApplicationWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationApplicationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationApplicationWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTISendInventoryPayrollMacro</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISendInventoryPayrollMacro</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendInventoryPayrollMacro</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendInventoryPayrollMacro - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendInventoryPayrollMacro - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendInventoryPayrollMacro - AN5</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTISendMessageToTruck</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISendMessageToTruck</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendMessageToTruck - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendMessageToTruck - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTISendMessageToTruck)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendMessageToTruck - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendMessageToTruck - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTISendMessageToTruck)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIQualcommInboundReplicationService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIQualcommInboundReplicationService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIQualcommInboundReplicationService</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIQualcommInboundReplicationService</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICompanyEmailService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICompanyEmailService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICompanyEmailService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTICompanyEmailService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyEmailService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyEmailService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyEmailService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTICompanyEmailService)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIDMDriverProcessing</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDMDriverProcessing</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDMDriverProcessing - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDMDriverProcessing - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMDriverProcessing - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMDriverProcessing - AN2</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTICompanyUserReplication</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICompanyUserReplication</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICompanyUserReplication - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyUserReplication - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICompanyUserReplication - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyUserReplication - AN2</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIDMRDOCalculationUpdate</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDMRDOCalculationUpdate</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDMRDOCalculationUpdate - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDMRDOCalculationUpdate - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMRDOCalculationUpdate - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMRDOCalculationUpdate - AN2</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTITransitTimeWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITransitTimeWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITransitTimeWS</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITransitTimeWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Test RTITransitTimeWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITransitTimeWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Test RTITransitTimeWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICustomerWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICustomerWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICustomerWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICustomerWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>DetentionService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build DetentionService</TargetNameFriendly>
+    <TargetNameFriendly>Backup DetentionService</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DetentionService</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTICommBackgroundEvent</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICommBackgroundEvent</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTICommBackgroundEvent - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommBackgroundEvent - AN2</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTICommBackgroundEvent)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommBackgroundEvent - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommBackgroundEvent - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTICommBackgroundEvent)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>TransitTimeWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build TransitTimeWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup TransitTimeWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup TransitTimeWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TransitTimeWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TransitTimeWS - WA2</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>Accounting Portal - HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build AccountingPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup AccountingPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup AccountingPortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccountingPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccountingPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEventsBackgroundProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEventsBackgroundProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventsBackgroundProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventsBackgroundProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventsBackgroundProcess - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventsBackgroundProcess - AN2</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIDMSplitFleetBackgroundProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDMSplitFleetBackgroundProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDMSplitFleetBackgroundProcess</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMSplitFleetBackgroundProcess - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMSplitFleetBackgroundProcess - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDMSplitFleetBackgroundProcess - AN5</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>EShopEquipmentData</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build EShopEquipmentData</TargetNameFriendly>
+    <TargetNameFriendly>Backup EShopEquipmentData -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Backup EShopEquipmentData -AN02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EShopEquipmentData -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EShopEquipmentData -AN02</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIMapping</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMapping</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMapping - MFDMap0001</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMapping - MFDMap0002</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMapping - MFDMap0003</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMapping - MFDMap0004</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0001 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMapping - MFDMap0001</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0001 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0002 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMapping - MFDMap0002</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0002 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0003 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMapping - MFDMap0003</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0003 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0004 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMapping - MFDMap0004</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0004 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTISPAWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISPAWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISPAWS</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISPAWS</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverHoursWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverHoursWS</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIDriverHoursWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverHoursWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverHoursWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverHoursWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>CreateMissingDetentionMessage</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build CreateMissingDetentionMessage</TargetNameFriendly>
+    <TargetNameFriendly>Backup CreateMissingDetentionMessage</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (CreateMissingDetentionMessage)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CreateMissingDetentionMessage - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CreateMissingDetentionMessage - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (CreateMissingDetentionMessage)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>UpdateReeferStarTrak 8.3</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build UpdateReeferStarTrak0803</TargetNameFriendly>
+    <TargetNameFriendly>Backup UpdateReeferStarTrak0803</TargetNameFriendly>
+    <TargetNameFriendly>Deploy UpdateReeferStarTrak0803</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>UpdateGETrailers</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build UpdateGETrailers</TargetNameFriendly>
+    <TargetNameFriendly>Backup UpdateGETrailers</TargetNameFriendly>
+    <TargetNameFriendly>Deploy UpdateGETrailers</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>UpdateQualCommTrailers</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build UpdateQualCommTrailers</TargetNameFriendly>
+    <TargetNameFriendly>Backup UpdateQualCommTrailers</TargetNameFriendly>
+    <TargetNameFriendly>Deploy UpdateQualCommTrailers</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverDetentionWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverDetentionWS</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIDriverDetentionWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverDetentionWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverDetentionWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverDetentionWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIDetentionWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDetentionWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDetentionWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDetentionWS WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionWS WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIUnitWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIUnitWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIUnitWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIUnitWS WA2</TargetNameFriendly>
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIUnitWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIUnitWS WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverManagementIntegrationWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverManagementIntegrationWS</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIDriverManagementIntegrationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverManagementIntegrationWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverManagementIntegrationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverManagementIntegrationWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+    
+  </Group>
+
+
+  <Group>
+    <GroupName>CSRPortal - HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build CSRPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup CSRPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup CSRPortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CSRPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CSRPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>LateLoadBatchProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build LateLoadBatchProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup LateLoadBatchProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup LateLoadBatchProcess - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy LateLoadBatchProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy LateLoadBatchProcess - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIUpdateLaneCommitments</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIUpdateLaneCommitments</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIUpdateLaneCommitments - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIUpdateLaneCommitments - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIUpdateLaneCommitments - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIUpdateLaneCommitments - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMappingUtilityServiceHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMappingUtilityServiceHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingUtilityServiceHost - mfdfr02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingUtilityServiceHost - MAP0001</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingUtilityServiceHost - MAP0002</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingUtilityServiceHost - MAP0003</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingUtilityServiceHost - MAP0004</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0001 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - MAP0001</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0001 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0002 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - MAP0002</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0002 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0003 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - MAP0003</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0003 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove Map0004 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - MAP0004</TargetNameFriendly>
+    <TargetNameFriendly>Add Map0004 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - mfdfr02</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - mfdfr03</TargetNameFriendly>
+    
+    <TargetNameFriendly>Deploy RTIMappingUtilityServiceHost - mfdfr04</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEventIntegrationWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEventIntegrationWS</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIEventIntegrationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEventIntegrationWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventIntegrationWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEventIntegrationWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>    
+  </Group>
+
+  <Group>
+    <GroupName>RTIOORCalculationService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOORCalculationService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOORCalculationService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIOORCalculationService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOORCalculationService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOORCalculationService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOORCalculationService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIOORCalculationService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMaintenanceETDNotify</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMaintenanceETDNotify</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMaintenanceETDNotify -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMaintenanceETDNotify -AN02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMaintenanceETDNotify -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMaintenanceETDNotify -AN02</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIViaPointVerification</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIViaPointVerification</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIViaPointVerification - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIViaPointVerification - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIViaPointVerification - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIViaPointVerification - AN5</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>MaintenancePortal HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MaintenancePortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenancePortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenancePortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenancePortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenancePortal - WS4</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>MaintenanceKiosk HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MaintenanceKiosk</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenanceKiosk - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenanceKiosk - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenanceKiosk - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenanceKiosk - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MaintenancePartsCounter HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MaintenancePartsCounter</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenancePartsCounter - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenancePartsCounter - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenancePartsCounter - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenancePartsCounter - WS4</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>FleetManagerPortal HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build FleetManagerPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup FleetManagerPortal WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy FleetManagerPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy FleetManagerPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MaintenanceTechProductivity HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MaintenanceTechProductivity</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenanceTechProductivity - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup MaintenanceTechProductivity - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenanceTechProductivity - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MaintenanceTechProductivity - WS4</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIViewOnlyPlanningTool HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIViewOnlyPlanningTool</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIViewOnlyPlanningTool WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIViewOnlyPlanningTool to WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIViewOnlyPlanningTool to WS4</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RoehlTraxx</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RoehlTraxx</TargetNameFriendly>
+    <TargetNameFriendly>Build RoehlTraxxMSI</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>Equipment Sales</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RoehlEquipmentSales</TargetNameFriendly>
+    <TargetNameFriendly>Build RoehlEquipmentSalesMSI</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>Breakdown</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build Breakdown</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>ImagingPortal - Dev to QA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ImagingPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingPortal - Dev to QA</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingPortal - Dev to QA</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>ImagingPortal HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ImagingPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingPortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDetentionPositionUpdates</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDetentionPositionUpdates</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDetentionPositionUpdates</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionPositionUpdates</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIReplication</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIReplication</TargetNameFriendly>
+    
+    <TargetNameFriendly>Backup RTIReplication_WHBATCH - AC2</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIReplication_WHEVENTS - AC2</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIReplication_WHBATCH)</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIReplication_WHEVENTS)</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIReplication_WHBATCH - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplication_WHBATCH - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplication_WHBATCH - AN5</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIReplication_WHEVENTS - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplication_WHEVENTS - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIReplication_WHEVENTS - AN5</TargetNameFriendly>
+
+    <TargetNameFriendly>Start Cluster Resource (RTIReplication_WHBATCH)</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIReplication_WHEVENTS)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>LateLoadPortal HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build LateLoadPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup LateLoadPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup LateLoadPortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy LateLoadPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy LateLoadPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMaintenanceMonitorETDUpdater</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMaintenanceMonitorETDUpdater</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMaintenanceMonitorETDUpdater - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMaintenanceMonitorETDUpdater - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMaintenanceMonitorETDUpdater - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMaintenanceMonitorETDUpdater - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MakeProfileCustomers</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MakeProfileCustomers</TargetNameFriendly>
+    <TargetNameFriendly>Backup MakeProfileCustomers</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MakeProfileCustomers AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MakeProfileCustomers AN2</TargetNameFriendly>
+
+  </Group>
+
+
+  <!--<Group>
+        <GroupName>RTIQualcommFwdReplication</GroupName>
+        <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+        <TargetNameFriendly>Build RTIQualcommFwdReplication</TargetNameFriendly>
+        <TargetNameFriendly>Backup RTIQualcommFwdReplication AN1</TargetNameFriendly>
+        <TargetNameFriendly>Backup RTIQualcommFwdReplication AN2</TargetNameFriendly>
+        <TargetNameFriendly>Stop Cluster Resource (RTIQualcommFwdReplication)</TargetNameFriendly>
+        <TargetNameFriendly>Deploy RTIQualcommFwdReplication AN1</TargetNameFriendly>
+        <TargetNameFriendly>Deploy RTIQualcommFwdReplication AN2</TargetNameFriendly>
+        <TargetNameFriendly>Start Cluster Resource (RTIQualcommFwdReplication)</TargetNameFriendly>
+    </Group>-->
+  <!--RtiQualCommXltWinSvc -->
+  <Group>
+    <GroupName>RtiQualCommXltWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RtiQualCommXltWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiQualCommXltWinSvc AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiQualCommXltWinSvc AN2</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RtiQualCommXltWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiQualCommXltWinSvc AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiQualCommXltWinSvc AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RtiQualCommXltWinSvc)</TargetNameFriendly>
+  </Group>
+
+
+  <!--RTIMTPBackgroundService -->
+  <Group>
+    <GroupName>RTIMTPBackgroundService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMTPBackgroundService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMTPBackgroundService AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMTPBackgroundService AN2</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIMTPBackgroundService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMTPBackgroundService AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMTPBackgroundService AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIMTPBackgroundService)</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIDriverManagementWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverManagementWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverManagementWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverManagementWS - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverManagementWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverManagementWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverDirectionWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverDirectionWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverDirectionWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverDirectionWS WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverDirectionWS WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverDirectionWS WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTICommunicationWebService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICommunicationWebService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationWebService - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationWebService - WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationWebService - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationWebService - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDAERServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDAERServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDAERServicesHost - WA1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDAERServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDAERServicesHost - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDAERServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDAERServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDAERServicesHost - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDAERServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIDriverServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDriverServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDriverServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDriverServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDriverServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEmployeeServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEmployeeServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEmployeeServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEmployeeServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEmployeeServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEmployeeServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEmployeeServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEmployeeServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEmployeeServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIOrderServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOrderServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOrderServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIOrderServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIOrderServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIOrderServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIOrderServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTIDataWarehouseServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDataWarehouseServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDataWarehouseServicesHost WA1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDataWarehouseServicesHost WA2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDataWarehouseServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDataWarehouseServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDataWarehouseServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDataWarehouseServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDataWarehouseServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDataWarehouseServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTITripsServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITripsServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITripsServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTITripsServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITripsServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTITripsServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTITripsServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITripsServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTITripsServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPayPlanServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPayPlanServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPayPlanServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIPayPlanServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIPayPlanServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIPayPlanServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIPayPlanServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEquipmentServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEquipmentServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEquipmentServicesHost - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEquipmentServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentServicesHost - Production WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEquipmentServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEquipmentServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentServicesHost - Production WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEquipmentServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMasterFilesServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMasterFilesServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMasterFilesServicesHost - WA1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMasterFilesServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMasterFilesServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMasterFilesServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMasterFilesServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMasterFilesServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMasterFilesServicesHost WA2 to VLM</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTIImagingServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIImagingServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIImagingServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIImagingServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIImagingServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIImagingServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIImagingServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIImagingServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIImagingServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMicrosoftGPServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMicrosoftGPServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMicrosoftGPServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMicrosoftGPServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMicrosoftGPServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMicrosoftGPServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMicrosoftGPServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMicrosoftGPServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMicrosoftGPServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICommunicationServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICommunicationServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Remove RTICommunicationServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICommunicationServicesHost WA1 to VLM</TargetNameFriendly>
+    <TargetNameFriendly>Remove RTICommunicationServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICommunicationServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDetentionServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDetentionServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDetentionServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Remove RTIDetentionServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDetentionServicesHost WA1 to VLM</TargetNameFriendly>
+    <TargetNameFriendly>Remove RTIDetentionServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDetentionServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTICustomerServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICustomerServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICustomerServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTICustomerServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICustomerServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTICustomerServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICustomerServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverLegacyServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverLegacyServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverLegacyServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDriverLegacyServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverLegacyServicesHost - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDriverLegacyServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIDriverLegacyServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverLegacyServicesHost - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIDriverLegacyServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>DAERWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build DAERWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup DAERWeb - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DAERWeb - Production WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DAERWeb - Production WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDAERConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDAERConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDAERConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDAERConsoleApp AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDAERConsoleApp AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverConsoleApp AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverConsoleApp AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTISendWeatherAlertMessage</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISendWeatherAlertMessage</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendWeatherAlertMessage - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendWeatherAlertMessage - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendWeatherAlertMessage - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISendWeatherAlertMessage - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDECProcessApplicationLead</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDECProcessApplicationLead</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDECProcessApplicationLead</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDECProcessApplicationLead AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDECProcessApplicationLead AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MasterFilesWeb - Dev</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MasterFilesWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup MasterFilesWeb - Dev</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MasterFilesWeb - Dev</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MasterFilesWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MasterFilesWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup MasterFilesWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MasterFilesWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy MasterFilesWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechXltWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechXltWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechXltWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechXltWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechXltWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechXltWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechXltWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechXltWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIHosInboundWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIHosInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIHosInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIHosInboundWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHosInboundWinSvc - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHosInboundWinSvc - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHosInboundWinSvc - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIHosInboundWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIELogInboundWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIELogInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIELogInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIELogInboundWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIELogInboundWinSvc - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIELogInboundWinSvc - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIELogInboundWinSvc - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIELogInboundWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEmployeeConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEmployeeConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEmployeeConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEmployeeConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEmployeeConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDataWarehouseConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDataWarehouseConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDataWarehouseConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDataWarehouseConsoleApp - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDataWarehouseConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDataWarehouseConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>SafetyPortal HA</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build SafetyPortal</TargetNameFriendly>
+    <TargetNameFriendly>Backup SafetyPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Backup SafetyPortal - WS4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy SafetyPortal - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy SafetyPortal - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>CustomerWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build CustomerWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup CustomerWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CustomerWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy CustomerWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>EmployeeWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build EmployeeWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup EmployeeWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EmployeeWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EmployeeWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>EquipmentWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build EquipmentWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup EquipmentWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Backup EquipmentWeb - WS2</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EquipmentWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EquipmentWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>EquipMangTools</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEquipMangTools</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEquipMangTools - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipMangTools - WS3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipMangTools - WS4</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>PayPlanWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build PayPlanWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup PayPlanWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy PayPlanWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test PayPlanWeb Production - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy PayPlanWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test PayPlanWeb Production - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>WorkflowWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build WorkflowWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup WorkflowWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy WorkflowWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy WorkflowWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>DriverWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build DriverWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup DriverWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DriverWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DriverWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>DetentionWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build DetentionWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup DetentionWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DetentionWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test DetentionWeb Production - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DetentionWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test DetentionWeb Production - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>TrailerTrackingWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build TrailerTrackingWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup TrailerTrackingWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TrailerTrackingWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TrailerTrackingWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>TerminalInventoryWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build TerminalInventoryWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup TerminalInventoryWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TerminalInventoryWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TerminalInventoryWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIFrameworkWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIFrameworkWeb - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWeb - Production WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWeb - Production WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIFrameworkWebMVC5</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIFrameworkWebMVC5 - Production</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWebMVC5 - Production WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWebMVC5 - Production WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS3 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWebMVC5 - Production WS3</TargetNameFriendly>
+    <TargetNameFriendly>Add WS3 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS4 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFrameworkWebMVC5 - Production WS4</TargetNameFriendly>
+    <TargetNameFriendly>Add WS4 to VLM</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTIPetrovendCardManagement</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPetrovendCardManagement</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPetrovendCardManagement</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPetrovendCardManagement</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>AnnualInspection</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build AnnualInspection</TargetNameFriendly>
+    <TargetNameFriendly>Backup AnnualInspection - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AnnualInspection - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AnnualInspection - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AnnualInspection - AN5</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPetrovendReplication</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPetrovendReplication</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPetrovendReplication</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPetrovendReplication</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIStarTrakProcessingService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIStarTrakProcessingService</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIStarTrakProcessingService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIStarTrakProcessingService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakProcessingService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakProcessingService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakProcessingService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIStarTrakProcessingService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIStarTrakTransmissionService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIStarTrakTransmissionService</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIStarTrakTransmissionService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIStarTrakTransmissionService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakTransmissionService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakTransmissionService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIStarTrakTransmissionService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIStarTrakTransmissionService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>TrailerCompareApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build TrailerCompareApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup TrailerCompareApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TrailerCompareApp</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTISendMPGMessage</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISendMPGMessage</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISendMPGMessage</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DeployRTISendMPGMessage -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DeployRTISendMPGMessage -AN02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEquipmentEventMaintenanceConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEquipmentEventMaintenanceConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEquipmentEventMaintenanceConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentEventMaintenanceConsoleApp -AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentEventMaintenanceConsoleApp -AN02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechInboundReplicationService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechInboundReplicationService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechInboundReplicationService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechInboundReplicationService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechInboundReplicationService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechInboundReplicationService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechInboundReplicationService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechInboundReplicationService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechSensorTracsInboundWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechSensorTracsInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechSensorTracsInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechSensorTracsInboundWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsInboundWinSvc - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsInboundWinSvc - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsInboundWinSvc - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechSensorTracsInboundWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechSensorTracsXltWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechSensorTracsXltWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechSensorTracsXltWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechSensorTracsXltWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsXltWinSvc - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsXltWinSvc - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechSensorTracsXltWinSvc - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechSensorTracsXltWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RtiSensorTracsMonthlyIdleData</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RtiSensorTracsMonthlyIdleData</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiSensorTracsMonthlyIdleData - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiSensorTracsMonthlyIdleData - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiSensorTracsMonthlyIdleData - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiSensorTracsMonthlyIdleData - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RtiSensorTracsMonthlyBonusData</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RtiSensorTracsMonthlyBonusData</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiSensorTracsMonthlyBonusData - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiSensorTracsMonthlyBonusData - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiSensorTracsMonthlyBonusData - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiSensorTracsMonthlyBonusData - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>EDIWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build EDIWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup EDIWeb</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EDIWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy EDIWeb - WS2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIOwnerSettlementConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOwnerSettlementConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOwnerSettlementConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOwnerSettlementConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOwnerSettlementConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPayPlanConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPayPlanConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPayPlanConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIOrderConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOrderConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOrderConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOrderConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICommunicationConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICommunicationConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICommunicationConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICommunicationConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDetentionConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDetentionConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDetentionConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDetentionConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIFuelTaxWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIFuelTaxWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIFuelTaxWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIFuelTaxWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFuelTaxWinSvc - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFuelTaxWinSvc - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIFuelTaxWinSvc - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIFuelTaxWinSvc)</TargetNameFriendly>
+</Group>
+
+  <Group>
+    <GroupName>RTIPayProcessingWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPayProcessingWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPayProcessingWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIPayProcessingWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayProcessingWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayProcessingWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIPayProcessingWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWorkflowOutboundDriverTechWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWorkflowOutboundDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWorkflowOutboundDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIWorkflowOutboundDriverTechWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowOutboundDriverTechWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowOutboundDriverTechWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIWorkflowOutboundDriverTechWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWorkflowInboundEngineDriverTechWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWorkflowInboundEngineDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWorkflowInboundEngineDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIWorkflowInboundEngineDriverTechWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowInboundEngineDriverTechWindowService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowInboundEngineDriverTechWindowService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowInboundEngineDriverTechWindowService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIWorkflowInboundEngineDriverTechWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWorkflowInboundDriverTechWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWorkflowInboundDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWorkflowInboundDriverTechWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIWorkflowInboundDriverTechWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowInboundDriverTechWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWorkflowInboundDriverTechWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIWorkflowInboundDriverTechWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTITenStreetBackgroundQueue</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITenStreetBackgroundQueue</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITenStreetBackgroundQueue</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTITenStreetBackgroundQueue)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITenStreetBackgroundQueue - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITenStreetBackgroundQueue - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTITenStreetBackgroundQueue)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTISettlementProcessingWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTISettlementProcessingWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTISettlementProcessingWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTISettlementProcessingWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISettlementProcessingWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTISettlementProcessingWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTISettlementProcessingWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIPayPlanPostPayService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIPayPlanPostPayService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIPayPlanPostPayService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIPayPlanPostPayService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanPostPayService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIPayPlanPostPayService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIPayPlanPostPayService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIOutboundDialerService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOutboundDialerService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOutboundDialerService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIOutboundDialerService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOutboundDialerService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOutboundDialerService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIOutboundDialerService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTITrailerDetentionBackgroundWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITrailerDetentionBackgroundWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITrailerDetentionBackgroundWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTITrailerDetentionBackgroundWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerDetentionBackgroundWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerDetentionBackgroundWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTITrailerDetentionBackgroundWindowService)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDecDriverRatingWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDecDriverRatingWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDecDriverRatingWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDecDriverRatingWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RoehlTraxxEmail</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RoehlTraxxEmail</TargetNameFriendly>
+    <TargetNameFriendly>Backup RoehlTraxxEmail</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RoehlTraxxEmail - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RoehlTraxxEmail - AN02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEquipmentConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEquipmentConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEquipmentConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentConsoleApp - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentConsoleApp - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentConsoleApp - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEquipmentConsoleApp - AN5</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTITrailerTrackingSpireonInboundService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITrailerTrackingSpireonInboundService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITrailerTrackingSpireonInboundService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTITrailerTrackingSpireonInboundService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerTrackingSpireonInboundService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerTrackingSpireonInboundService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTITrailerTrackingSpireonInboundService)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTITrailerTrackingWindowsServiceSpireonProcess</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITrailerTrackingWindowsServiceSpireonProcess</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITrailerTrackingWindowsServiceSpireonProcess</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTITrailerTrackingWindowsServiceSpireonProcess)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerTrackingWindowsServiceSpireonProcess - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITrailerTrackingWindowsServiceSpireonProcess - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTITrailerTrackingWindowsServiceSpireonProcess)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIImagingSendFile</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ImagingSendFile</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingSendFile AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingSendFile AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingSendFile AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingSendFile AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>AccidentsConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build AccidentsConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup AccidentsConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsConsoleApp AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsConsoleApp AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>AccidentsWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build AccidentsWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup AccidentsWeb</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsWeb WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsWeb WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>AccidentsServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build AccidentsServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup AccidentsServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove AccidentsServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsServicesHost WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add AccidentsServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove AccidentsServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy AccidentsServicesHost WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add AccidentsServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechMacroFormsRetrievalConsole</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechMacroFormsRetrievalConsole</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechMacroFormsRetrievalConsole</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechMacroFormsRetrievalConsole)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechMacroFormsRetrievalConsole - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechMacroFormsRetrievalConsole - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechMacroFormsRetrievalConsole - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechMacroFormsRetrievalConsole)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMyRoehlDrivingStatusWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMyRoehlDrivingStatusWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMyRoehlDrivingStatusWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIMyRoehlDrivingStatusWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMyRoehlDrivingStatusWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMyRoehlDrivingStatusWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIMyRoehlDrivingStatusWinSvc)</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.ConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhConsoleApp</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.Services.Host</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+
+    <TargetNameFriendly>Build RTI.Manh.Services.Host</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTI.Manh.Services.Host</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTI.Manh.Services.Host WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTI.Manh.Services.Host - Production WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTI.Manh.Services.Host WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTI.Manh.Services.Host WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTI.Manh.Services.Host - Production WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTI.Manh.Services.Host WA2 to VLM</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowService.DrvrLd.ItWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowServiceDrvrLdItWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowServiceDrvrLdItWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowServiceDrvrLdItWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowService.DrvrLd.OtWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowServiceDrvrLdOtWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowServiceDrvrLdOtWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowServiceDrvrLdOtWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowService.DrpSwp.NHTPWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowServiceDrpSwpNHTPWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowServiceDrpSwpNHTPWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowServiceDrpSwpNHTPWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowService.DrpSwp.ITPWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowServiceDropSwapItWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowServiceDropSwapItWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowServiceDropSwapItWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowService.DrpSwp.OTPWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowServiceDropSwapOtWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowServiceDropSwapOtWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowServiceDropSwapOtWinSvc</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI.Manh.WindowsService.DrvrLd.UpdateWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIManhWindowsServiceDrvrLdUpdateWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIManhWindowsServiceDrvrLdUpdateWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIManhWindowsServiceDrvrLdUpdateWinSvc</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTI.Manh.Web</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTI.Manh.Web</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTI.Manh.Web - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTI.Manh.Web - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTI.Manh.Web - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTITripsConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITripsConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITripsConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITripsConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTITripsConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>MaintenanceRequestMonitor</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build MaintenanceRequestMonitor</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>BuildManager</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Deploy BuildManager</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RtiBOLInOutRecap</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RtiBOLInOutRecap</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiBOLInOutRecap</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiBOLInOutRecap - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiBOLInOutRecap - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RtiMinWages</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RtiMinWages</TargetNameFriendly>
+    <TargetNameFriendly>Backup RtiMinWages</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiMinWages - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RtiMinWages - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICallRecordServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICallRecordServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICallRecordServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTICallRecordServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICallRecordServicesHost WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICallRecordServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTICallRecordServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICallRecordServicesHost WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTICallRecordServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTICallRecordConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICallRecordConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICallRecordConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICallRecordConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICallRecordConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechTrailerEventsInboundWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechTrailerEventsInboundWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechTrailerEventsInboundWinSvc</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechTrailerEventsInboundWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechTrailerEventsInboundWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechTrailerEventsInboundWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechTrailerEventsInboundWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechTrailerEventsXltWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechTrailerEventsXltWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechTrailerEventsXltWinSvc</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechTrailerEventsXltWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechTrailerEventsXltWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechTrailerEventsXltWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechTrailerEventsXltWinSvc)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIDriverTechDecelerationWinSvc</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIDriverTechDecelerationWinSvc</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIDriverTechDecelerationWinSvc</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIDriverTechDecelerationWinSvc)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechDecelerationWinSvc - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIDriverTechDecelerationWinSvc - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIDriverTechDecelerationWinSvc)</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTICustomerConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICustomerConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICustomerConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICustomerConsoleApp - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICustomerConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTI CRM Integration Plugin</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTI CRM Integration Plugin</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>OM Planning Tool</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build OM Planning Tool</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>ImgServer</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build Imaging Polling Server</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>TeamRoehl</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build TeamRoehl</TargetNameFriendly>
+    <TargetNameFriendly>Backup TeamRoehl - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Backup TeamRoehl - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Stop TeamRoehl - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TeamRoehl - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl GetHashkey - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Home - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Pay - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Messages - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Test TeamRoehl Login - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Start TeamRoehl - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Stop TeamRoehl - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy TeamRoehl - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl GetHashkey - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Home - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Pay - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test MyRoehl Messages - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Test TeamRoehl Login - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Start TeamRoehl - WS2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RatingWebService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RatingWebService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RatingWebService - WA1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RatingWebService WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RatingWebService - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RatingWebService WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RatingWebService WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RatingWebService - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RatingWebService WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIImagingFileWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIImagingFileWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIImagingFileWS - WA1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIImagingFileWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIImagingFileWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <Group>
+    <GroupName>RTICompanyWS</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTICompanyWS</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTICompanyWS - WA1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyWS - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTICompanyWS - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <!--
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    Fuel & Route System
+    ========================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+  -->
+  <!-- Group>
+    <GroupName>RTIIFRRequestCenter-MFDWA0001 and MFDWA0002</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRRequestCenter-MFDWA0001 and MFDWA0002</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIIFRRequestCenter-MFDWA0001</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDWA0001</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDWA0002</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDFR02</TargetNameFriendly>
+
+  </Group -->
+
+  <!--
+    =======================================================================
+    Fuel & Route System 2016
+    =======================================================================
+  -->
+  <Group>
+    <GroupName>RTIIFRDriverDirections-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRDriverDirections-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRDriverDirections-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRDriverDirections-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRNTP-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRNTP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRNTP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRNTP-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRQITP-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRQITP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRQITP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRQITP-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRQORP-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRQORP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRQORP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRQORP-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRUTLWinSrv-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRUTLWinSrv-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRUTLWinSrv-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRUTLWinSrv-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFROOR-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFROOR-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFROOR-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFROOR-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRFRP-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRFRP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRFRP-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRFRP-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRMonitor-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRMonitor-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRMonitor-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRMonitor-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRCCTransactionRetrieval-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRCCTransactionRetrieval-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRCCTransactionRetrieval-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRCCTransactionRetrieval-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMqConsole-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMqConsole-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMqConsole-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMqConsole-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRAdmin-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRAdmin-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRAdmin-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRAdmin-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRUTLWebSrv-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRUTLWebSrv-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRUTLWebSrv-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRUTLWebSrv-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRRouteSyncWinSvc-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRRouteSyncWinSvc-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRRouteSyncWinSvc-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRouteSyncWinSvc-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRTripPaidMilesCompare-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRTripPaidMilesCompare-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRTripPaidMilesCompare-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRTripPaidMilesCompare-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRRouteSyncOORWinSvc-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRRouteSyncOORWinSvc-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRRouteSyncOORWinSvc-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRouteSyncOORWinSvc-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFR_Tolls-MFDFR02</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFR_Tolls-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFR_Tolls-MFDFR02</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFR_Tolls-MFDFR02</TargetNameFriendly>
+  </Group>
+
+  <!--
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    End Fuel & Route System
+    ========================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+  -->
+  <Group>
+    <GroupName>RTIImagePrintingService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIImagePrintingService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIImagePrintingService RTIPrint4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIImagePrintingService RTIPrint4</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>ImagingWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ImagingWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup ImagingWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ImagingWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTITrailerTrackingTrailerValidation</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTITrailerTrackingTrailerValidation</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITrailerTrackingTrailerValidation - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTITrailerTrackingTrailerValidation - AN02</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTITrailerTrackingTrailerValidation)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DeployRTITrailerTrackingTrailerValidation - AN01</TargetNameFriendly>
+    <TargetNameFriendly>Deploy DeployRTITrailerTrackingTrailerValidation - AN02</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTITrailerTrackingTrailerValidation)</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEDIConsoleApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEDIConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEDIConsoleApp</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIConsoleApp - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIConsoleApp - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEDIServiceHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEDIServiceHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEDIServiceHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEDIServiceHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIServiceHost - WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEDIServiceHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIEDIServiceHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIServiceHost - WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIEDIServiceHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIEDIBackgroundQueueWindowService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEDIBackgroundQueueWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEDIBackgroundQueueWindowService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIEDIBackgroundQueueWindowService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIBackgroundQueueWindowService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIBackgroundQueueWindowService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIEDIBackgroundQueueWindowService)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIEDIInboundFromAzureWindowsService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEDIInboundFromAzureWindowsService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEDIInboundFromAzureWindowsService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIEDIInboundFromAzureWindowsService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIInboundFromAzureWindowsService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEDIInboundFromAzureWindowsService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIEDIInboundFromAzureWindowsService)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIEdiOutboundToAzure</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIEdiOutboundToAzure</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIEdiOutboundToAzure</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIEdiOutboundToAzure)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEdiOutboundToAzure - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIEdiOutboundToAzure - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIEdiOutboundToAzure)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIApplicationMessagingService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIApplicationMessagingService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIApplicationMessagingService</TargetNameFriendly>
+
+    <TargetNameFriendly>Stop Cluster Resource (RTIApplicationMessagingService)</TargetNameFriendly>
+    
+    <TargetNameFriendly>Deploy RTIApplicationMessagingService - AN3</TargetNameFriendly>    
+    <TargetNameFriendly>Deploy RTIApplicationMessagingService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIApplicationMessagingService - AN5</TargetNameFriendly>
+
+    <TargetNameFriendly>Start Cluster Resource (RTIApplicationMessagingService)</TargetNameFriendly>    
+  </Group>
+
+  <Group>
+    <GroupName>RTIBreakdownUpdateIncidentService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIBreakdownUpdateIncidentService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBreakdownUpdateIncidentService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource (RTIBreakdownUpdateIncidentService)</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBreakdownUpdateIncidentService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBreakdownUpdateIncidentService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource (RTIBreakdownUpdateIncidentService)</TargetNameFriendly>
+  </Group>
+  <Group>
+    <GroupName>RTIBreakdownBackgroundService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIBreakdownBackgroundService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIBreakdownBackgroundService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIBreakdownBackgroundService</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBreakdownBackgroundService - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIBreakdownBackgroundService - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIBreakdownBackgroundService</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>ApplicationRequestTrackerWeb</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build ApplicationRequestTrackerWeb</TargetNameFriendly>
+    <TargetNameFriendly>Backup ApplicationRequestTrackerWeb - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ApplicationRequestTrackerWeb - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy ApplicationRequestTrackerWeb - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIWHUpdateStandardFuelSurcharge</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIWHUpdateStandardFuelSurcharge</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWHUpdateStandardFuelSurcharge - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIWHUpdateStandardFuelSurcharge - AN2</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWHUpdateStandardFuelSurcharge - AN1</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIWHUpdateStandardFuelSurcharge - AN2</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIHardBrakingAlertApp</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIHardBrakingAlertApp</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIHardBrakingAlertApp - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHardBrakingAlertApp - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHardBrakingAlertApp - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIHardBrakingAlertApp - AN5</TargetNameFriendly>
+  </Group>
+  
+  <Group>
+    <GroupName>RTIOMUpdateTripStatuses</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIOMUpdateTripStatuses</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIOMUpdateTripStatuses - WS1</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMUpdateTripStatuses - WS1</TargetNameFriendly>
+    <TargetNameFriendly>Add WS1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIOMUpdateTripStatuses - WS2</TargetNameFriendly>
+    <TargetNameFriendly>Add WS2 to VLM</TargetNameFriendly>
+  </Group>
+
+  <!--
+    =======================================================================
+    RTIMyRoehlWindowsService
+    =======================================================================
+  -->
+  <Group>
+    <GroupName>RTIMyRoehlWindowsService</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMyRoehlWindowsService</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMyRoehlWindowsService</TargetNameFriendly>
+    <TargetNameFriendly>Stop Cluster Resource RTIMyRoehlWindowsService</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMyRoehlWindowsService - AN3</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMyRoehlWindowsService - AN4</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMyRoehlWindowsService - AN5</TargetNameFriendly>
+    <TargetNameFriendly>Start Cluster Resource RTIMyRoehlWindowsService</TargetNameFriendly>  
+  </Group>  
+
+  <Group>
+    <GroupName>RTIMappingServicesHost</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMappingServicesHost</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMappingServicesHost</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMappingServicesHost WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingServicesHost WA1</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMappingServicesHost WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove RTIMappingServicesHost WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMappingServicesHost WA2</TargetNameFriendly>
+    <TargetNameFriendly>Add RTIMappingServicesHost WA2 to VLM</TargetNameFriendly>
+  </Group>
+
+
+  <!--
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+   	Fuel & Route 2017
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+	-->
+  <Group>
+    <GroupName>RTIIFRRequestCenter-MFDWA0001 and MFDWA0002</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRRequestCenter-MFDWA0001 and MFDWA0002</TargetNameFriendly>
+
+    <TargetNameFriendly>Backup RTIIFRRequestCenter-MFDWA0001</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA1 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDWA0001</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA1 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Remove WS WA2 from VLM</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDWA0002</TargetNameFriendly>
+    <TargetNameFriendly>Add WS WA2 to VLM</TargetNameFriendly>
+
+    <TargetNameFriendly>Deploy RTIIFRRequestCenter-MFDFR03</TargetNameFriendly>
+
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRDriverDirections-MFDFR03 and MFDFR04</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRDriverDirections-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRDriverDirections-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRDriverDirections-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRDriverDirections-MFDFR04</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRDriverDirections-MFDFR04</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRNTP-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRNTP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRNTP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRNTP-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRQITP-MFDFR03 and MFDFR04</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRQITP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRQITP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRQITP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRQITP-MFDFR04</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRQITP-MFDFR04</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRQORP-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRQORP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRQORP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRQORP-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRUTLWinSrv-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRUTLWinSrv-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRUTLWinSrv-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFRUTLWinSrv-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFROOR-MFDFR03 and MFDFR04</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFROOR-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFROOR-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFROOR-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFROOR-MFDFR04</TargetNameFriendly>
+    <TargetNameFriendly>Deploy And Start RTIIFROOR-MFDFR04</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRFRP-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRFRP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRFRP-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRFRP-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRMonitor-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRMonitor-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRMonitor-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRMonitor-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRCCTransactionRetrieval-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRCCTransactionRetrieval-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRCCTransactionRetrieval-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRCCTransactionRetrieval-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIMqConsole-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIMqConsole-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIMqConsole-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIMqConsole-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRAdmin-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRAdmin-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRAdmin-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRAdmin-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRUTLWebSrv-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRUTLWebSrv-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRUTLWebSrv-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRUTLWebSrv-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRRouteSyncWinSvc-MFDFR03 and MFDFR04</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRRouteSyncWinSvc-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRRouteSyncWinSvc-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRouteSyncWinSvc-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRRouteSyncWinSvc-MFDFR04</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRRouteSyncWinSvc-MFDFR04</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFRTripPaidMilesCompare-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFRTripPaidMilesCompare-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFRTripPaidMilesCompare-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFRTripPaidMilesCompare-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <Group>
+    <GroupName>RTIIFR_Tolls-MFDFR03</GroupName>
+    <TargetNameFriendly>Get Latest DEV</TargetNameFriendly>
+    <TargetNameFriendly>Build RTIIFR_Tolls-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Backup RTIIFR_Tolls-MFDFR03</TargetNameFriendly>
+    <TargetNameFriendly>Deploy RTIIFR_Tolls-MFDFR03</TargetNameFriendly>
+  </Group>
+
+  <!--
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+    End Fuel & Route System 2017
+    ========================================================================
+    =======================================================================
+    =======================================================================
+    =======================================================================
+  -->  
+</TargetGroupsData>
+

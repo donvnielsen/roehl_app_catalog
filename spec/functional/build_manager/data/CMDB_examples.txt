@@ -1,0 +1,62 @@
+select top 10* from RTICommon.dbo.tbCMDBApplication where ApplicationName like '%breakdown%'
+-- applications related to solutions/projects
+ApplicationName															ApplicationType		ErrorLogAppName
+DetentionService														WindowsService		Detention
+RTIBillingWS																WebService				RTIBillingWS
+RTIARCreditRatio														ScheduledTask			RTIARCreditRatio
+RTIEquipmentServicesHost - HA								WCFService				RTIEquipmentWCFService
+RTIDriverManagementIntegrationWS						WebService				DMIntegrationWS
+RTIMappingServicesHost											WCFService				RTIMappingWCFService
+RTIDecDriverRatingWinSvc										WindowsService		RTIDecDriverRatingWinSvc
+RTIPayPlanPostPayService 										WindowsService		RTIPayPlanPostPayService 
+RTIDriverServicesHost - Dev (TESTWS0001)		DeploymentPlaceHolder	
+RtiFuelTaxWinSvc														WindowsService		RtiFuelTaxWinSvc
+
+
+select top 10* from RTICommon.dbo.tbCMDBApplicationServer
+-- servers those applications run on (not sensitive to clustering)
+-- linked to applications (there is no CMDServers table)
+ServerName
+RTICOMM1
+MFDWS0001
+MFDAN0001
+RTIAPP1
+RTIAPP1
+RTINET4
+MFDMap0004
+mfdan0001
+RTIAPP1
+
+
+select top 10* from RTICommon.dbo.tbCMDBSystem
+-- given system names (not sure of origin)
+SystemName
+Order Entry
+Out Of Route
+Owner Operator Percentage Pay System
+Phone System
+Planning Tool
+Rating System
+Reposition Moves
+Roehl Traxx
+RTIReplication
+Safety System
+SPA
+
+
+select top 10* from RTICommon.dbo.tbCMDBSystemCategory
+-- link between system and category (only one row)
+
+select top 10* from RTICommon.dbo.tbCMDBCategory
+-- umbrella category names for systems
+CategoryName
+Order Management
+Customer Management
+Driver Management
+Equipment Management
+Company Management
+ROADS 1.0
+ROADS 2.0
+Customer Service
+
+

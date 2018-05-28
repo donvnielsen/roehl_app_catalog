@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BuildManagerData xmlns="http://tempuri.org/BuildManagerData.xsd">
+  <Builds>
+    <TargetNameFriendly>Target Name Friendly</TargetNameFriendly>
+    <Command>/t:DeployRTIEDIConsoleApp
+      /property:LocalBuildFolder=E:\_code\Source\Dev\V4;WebFolder=c$\RoehlPrograms\RTIEDIConsoleApp\;Server=MFDAN0001;AppName=RTIEDIConsoleApp;Transform=Release
+    </Command>
+  </Builds>
+</BuildManagerData>
