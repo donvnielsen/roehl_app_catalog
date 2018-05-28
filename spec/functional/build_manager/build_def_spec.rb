@@ -1,11 +1,11 @@
 require 'spec_helper'
 require_relative '../../../classes/build_manager/build_def'
 
-BUILDMGR_DATA_DIR = File.join(SPEC_DATA_DIR,'build_manager')
+BUILDMGR_DATA_DIR = File.join(SPEC_DATA_DIR, 'build_manager')
 
 describe BuildDef do
   before(:all) do
-    fname = File.join(BUILDMGR_DATA_DIR,'simple_builds.xml')
+    fname = File.join(BUILDMGR_DATA_DIR, 'simple_builds.xml')
     @doc = File.open(fname) {|f| Nokogiri::XML(f) }
     @buildmgr = @doc.xpath('xmlns:BuildManagerData')
   end
@@ -20,53 +20,51 @@ describe BuildDef do
   end
 
   context 'parsing of information' do
-    before(:all) do
+    before(:each) do
       @bdef = BuildDef.new(@buildmgr.xpath('xmlns:Builds').first)
     end
 
-    it 'should return target properties as a hash' do
-      expect(@bdef.properties.is_a?(Hash)).to be_truthy
-    end
-    it 'should have parsed keys' do
-      [:localbuildfolder,:webfolder,:server,:appname].each {|p|
-        expect(@bdef.properties.include?(p.downcase)).to be_truthy
-      }
-    end
-    it 'should return target name' do
-      expect(@bdef.target_name).to eq('DeployRTIEDIConsoleApp')
-    end
-    it 'should return friendly name' do
-      expect(@bdef.friendly_name).to eq('Target Name Friendly')
-    end
-  end
-
-  context 'getting server name' do
-    before(:all) do
-      @bdef = BuildDef.new(@buildmgr.xpath('xmlns:Builds').first)
+    context 'initialization of hash' do
+      it 'should return target properties as a hash' do
+        expect(@bdef.properties.is_a?(Hash)).to be_truthy
+      end
+      it 'should have parsed keys' do
+        [:localbuildfolder,:webfolder,:server,:appname].each {|p|
+          expect(@bdef.properties.include?(p.downcase)).to be_truthy
+        }
+      end
     end
 
-    it 'should return server name' do
-      expect(@bdef.server_name).to eq('MFDAN0001')
+    context 'getting target name' do
+      it 'should return target name' do
+        expect(@bdef.target_name).to eq('DeployRTIEDIConsoleApp')
+      end
+      it 'should return friendly name' do
+        expect(@bdef.friendly_name).to eq('Target Name Friendly')
+      end
     end
 
-    it 'should return nothing when there is no server name to return' do
-      @bdef.properties.delete(:server)
-      expect(@bdef.server_name.nil?).to be_truthy
-    end
-  end
+    context 'getting server name' do
+      it 'should return server name' do
+        expect(@bdef.server_name).to eq('MFDAN0001')
+      end
 
-  context 'getting app name' do
-    before(:all) do
-      @bdef = BuildDef.new(@buildmgr.xpath('xmlns:Builds').first)
-    end
-
-    it 'should return server name' do
-      expect(@bdef.app_name).to eq('RTIEDIConsoleApp')
+      it 'should return nothing when there is no server name to return' do
+        @bdef.properties.delete(:server)
+        expect(@bdef.server_name.nil?).to be_truthy
+      end
     end
 
-    it 'should return nothing when there isnt an app name to return' do
-      @bdef.properties.delete(:server)
-      expect(@bdef.server_name.nil?).to be_truthy
+    context 'getting app name' do
+      it 'should return server name' do
+        expect(@bdef.app_name).to eq('RTIEDIConsoleApp')
+      end
+
+      it 'should return nothing when there isnt an app name to return' do
+        @bdef.properties.delete(:server)
+        expect(@bdef.server_name.nil?).to be_truthy
+      end
     end
+
   end
 end
