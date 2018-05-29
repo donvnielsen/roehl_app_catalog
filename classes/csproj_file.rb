@@ -82,10 +82,12 @@ class CsprojFile
       @ref_projects.count.times {|i|
         prj = @ref_projects.shift
 
-        # this reference can be skipped if there is already an established
-        # project with project references. It has already been recursed
+        # this reference does not have to be recursed; it already has been.
+        # but a project reference does need to be created linking the
+        # current project to this reference.
         if (p=Project.find_by_guid(prj[:guid]))
-          if ProjectProject.find_by_project_id(p.nil? ? -1 : p.id)
+          if (pp = ProjectProject.find_by_project_id(p.nil? ? -1 : p.id))
+            ProjectProject.create(project_id:self.prj.id, project_ref_id:pp.project_id)
             LOGGER.debug(indent + prj[:name] + ' already logged') if LOGGER.debug?
             next
           end
@@ -102,10 +104,7 @@ class CsprojFile
         # project to the referenced project. It is a quiet create, meaning
         # an exception is not thrown if the reference already exists
         begin
-          ProjectProject.create(
-              project_id:self.prj.id,
-              project_ref_id:csproj.prj.id
-          )
+          ProjectProject.create(project_id:self.prj.id, project_ref_id:csproj.prj.id)
         rescue NoMethodError
           pp "\n",fname,csproj.prj,self.prj
           raise
