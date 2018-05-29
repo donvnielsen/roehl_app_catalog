@@ -28,7 +28,7 @@ DatabaseCleaner.clean_with :truncation
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
-solutions_dir = File.join(ROOT_DIR, CONFIG['datadir'], 'solutions', '*.sln')
+solutions_dir = File.join(CONFIG['datadir'], 'solutions', '*.sln')
 # solutions_dir = File.join(ROOT_DIR, CONFIG['datadir'], 'solutions', 'RTI*.sln')
 # solutions_dir = File.join(ROOT_DIR, CONFIG['datadir'], 'solutions', 'a*.sln')
 solution_files = Dir.glob(solutions_dir, File::FNM_CASEFOLD).sort
