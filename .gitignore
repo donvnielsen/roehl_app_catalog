@@ -1,7 +1,7 @@
 .git
 .idea
 *.db
-logs/*.log
+logs
 scripts
 spec/data
 pkg
@@ -9,3 +9,4 @@ pkg
 *.bak
 *.sln
 *.csproj
+config
