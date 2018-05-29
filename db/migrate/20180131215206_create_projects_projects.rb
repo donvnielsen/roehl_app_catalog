@@ -3,8 +3,6 @@ class CreateProjectsProjects < ActiveRecord::Migration[5.1]
     create_table :projects_projects do |t|
       t.integer :project_id
       t.integer :project_ref_id
-
-      t.timestamps
     end
 
     add_index :projects_projects, [:project_id, :project_ref_id], unique: true,
