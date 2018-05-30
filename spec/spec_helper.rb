@@ -10,7 +10,7 @@ require 'pp'
 ENV['RAILS_ENV'] = 'dev'
 require_relative '../config/environment'
 
-SPEC_DATA_DIR = '/home/dvn/Documents/roehl_app_catalog_test_data'
+SPEC_DATA_DIR = 'c:/users/niedo/Documents/roehl_app_catalog_test_data'
 TEST_SOLUTION_FILE = File.join(SPEC_DATA_DIR,'spec_test_solution.sln')
 TEST_PROJECT_FILE  = File.join(SPEC_DATA_DIR,'spec_test_project.csproj')
 
