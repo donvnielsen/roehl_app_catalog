@@ -37,7 +37,8 @@ def propogate_servers(builds)
     BuildDef.new(build).server_name
   }.uniq
   servers.each {|server|
-    Server.find_by_name(server) || Server.create(name: server)
+    next if server.nil? || server.size == 0
+    Server.create(name: server) if Server.find_by_name(server).nil?
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
@@ -57,7 +58,8 @@ def propogate_applications(builds)
     BuildDef.new(build).app_name
   }.uniq
   apps.each {|app|
-    RoehlApplication.find_by_name(app) || RoehlApplication.create(name: app)
+    next if app.nil? || app.size == 0
+    RoehlApplication.create(name: app) if RoehlApplication.find_by_name(app).nil?
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
@@ -68,15 +70,8 @@ RoehlApplication.destroy_all
 
 # load builds with nokogiri
 builds = nil
-File.open(File.join(
-    '/home',
-    'dvn',
-          'Documents',
-          'roehl_app_catalog_test_data',
-          'build_manager',
-          'BuildManager.xml'
-  )
-) {|f|
+fname = File.join(CONFIG['datadir'], 'build_manager', 'BuildManager.xml')
+File.open(fname) {|f|
   doc = Nokogiri::XML(f) {|config| config.noblanks}
   buildmgr = doc.xpath('xmlns:BuildManagerData')
   begin
