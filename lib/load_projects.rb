@@ -34,7 +34,7 @@ pb = ProgressBar.create(
 Project.all.each {|prj|
   pb.increment
   next unless prj[:ptype] == 'csproj'
-  fname = File.join(CONFIG['datadir'],'projects',"#{prj[:name]}.csproj")
+  fname = File.join(CONFIG['datadir'],'dockhours','projects',"#{prj[:name]}.csproj")
   LOGGER.debug(LogProject.msg(prj,'Solution Project')) if LOGGER.debug?
   csproj = CsprojFile.new( fname,prj[:guid],0 )
   csproj.recurse_projects( File.join(CONFIG['datadir'],'projects') )

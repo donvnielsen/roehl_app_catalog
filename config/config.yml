@@ -1,8 +1,8 @@
 dev: &dev
-  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data/dockhours
+  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
   dbdir: db
 development: *dev
 
 test: &test
-  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data/dockhours
+  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
   dbdir: db
