@@ -23,11 +23,6 @@ describe ProjectProject do
       expect(errors[:project_ref_id]).to include("can't be blank")
     end
 
-    it 'should throw error when project id is unknown' do
-      errors = ProjectProject.create().errors
-      expect(errors[:project_id]).to include("can't be blank")
-      expect(errors[:project_ref_id]).to include("can't be blank")
-    end
   end
 
   context 'project presence' do

@@ -12,6 +12,7 @@ require_relative '../classes/log_formatter/log_server'
 require_relative '../classes/build_manager/build_def'
 require_relative '../app/models/server'
 require_relative '../app/models/roehl_application'
+require_relative '../app/models/roehl_application_server'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
@@ -24,6 +25,7 @@ puts "Start #{Time.now}"
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 def propogate_servers(builds)
+  Server.destroy_all
   servers = builds.map {|build| build.server_name }.uniq
 
   pb = ProgressBar.create(
@@ -44,6 +46,7 @@ def propogate_servers(builds)
 end
 
 def propogate_applications(builds)
+  RoehlApplication.destroy_all
   apps = builds.map {|build| build.app_name }.uniq
 
   pb = ProgressBar.create(
@@ -63,8 +66,30 @@ def propogate_applications(builds)
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-Server.destroy_all
-RoehlApplication.destroy_all
+def propogate_references(builds)
+  pb = ProgressBar.create(
+      title: __method__.to_s,
+      total: builds.count,
+      remainder_mark: '.',
+      format: '%t |%B| %c of %C %p%%',
+      length: 80
+  )
+
+  builds.each { |build|
+    pb.increment
+    next if build.app_name.nil? || build.app_name.size == 0
+    next if build.server_name.nil? || build.server_name.size == 0
+
+    app = RoehlApplication.find_by_name(build.app_name.downcase)
+    server = Server.find_by_name(build.server_name.downcase)
+    begin
+      RoehlApplicationServer.create( roehl_application_id: app.id, server_id: server.id )
+    rescue NoMethodError
+      pp build,build.app_name,app,build.server_name,server
+      raise
+    end
+  }
+end
 
 # load builds with nokogiri
 builds = nil
@@ -81,7 +106,10 @@ File.open(fname) {|f|
 
 builds = builds.map { |build| BuildDef.new(build) }
 
+RoehlApplicationServer.destroy_all
+
 propogate_servers(builds)
 propogate_applications(builds)
+propogate_references(builds)
 
 puts "End #{Time.now}"
