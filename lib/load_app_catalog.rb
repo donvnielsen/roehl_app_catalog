@@ -24,19 +24,18 @@ puts "Start #{Time.now}"
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 def propogate_servers(builds)
+  servers = builds.map {|build| build.server_name }.uniq
+
   pb = ProgressBar.create(
       title: __method__.to_s,
-      total: builds.count,
+      total: servers.count,
       remainder_mark:'.',
       format: '%t |%B| %c of %C %p%%',
       length: 80
   )
 
-  servers = builds.map {|build|
-    pb.increment
-    BuildDef.new(build).server_name
-  }.uniq
   servers.each {|server|
+    pb.increment
     next if server.nil? || server.size == 0
     Server.create(name: server) if Server.find_by_name(server).nil?
   }
@@ -45,19 +44,18 @@ def propogate_servers(builds)
 end
 
 def propogate_applications(builds)
+  apps = builds.map {|build| build.app_name }.uniq
+
   pb = ProgressBar.create(
       title: __method__.to_s,
-      total: builds.count,
+      total: apps.count,
       remainder_mark: '.',
       format: '%t |%B| %c of %C %p%%',
       length: 80
   )
 
-  apps = builds.map {|build|
-    pb.increment
-    BuildDef.new(build).app_name
-  }.uniq
   apps.each {|app|
+    pb.increment
     next if app.nil? || app.size == 0
     RoehlApplication.create(name: app) if RoehlApplication.find_by_name(app).nil?
   }
@@ -80,6 +78,8 @@ File.open(fname) {|f|
     raise
   end
 }
+
+builds = builds.map { |build| BuildDef.new(build) }
 
 propogate_servers(builds)
 propogate_applications(builds)
