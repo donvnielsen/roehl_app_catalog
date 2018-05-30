@@ -7,7 +7,7 @@ class RoehlApplication < ActiveRecord::Base
 
   before_save :strip_columns,:downcase_columns
 
-  ERR_INVALID_ID = 'id must reference existing server'
+  ERR_INVALID_ID = 'id must reference existing roehl application'
 
   def init
     self.name ||= ''
