@@ -44,6 +44,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.2-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    os (1.0.0)
     rack (2.0.5)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -101,6 +102,7 @@ DEPENDENCIES
   activerecord (~> 5.2)
   database_cleaner (~> 1.7)
   nokogiri (~> 1.8)
+  os
   rspec (~> 3.7)
   rspec-mocks (~> 3.7)
   rspec-rails (~> 3.7)

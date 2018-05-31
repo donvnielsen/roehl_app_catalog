@@ -14,6 +14,7 @@ LOGGER = Logger.new(LOGGER_FILE)
 LOGGER.level = Logger::DEBUG  #,INFO,WARN,ERROR,FATAL,UNKNOWN
 # LOGGER.progname = 'testing' or LOGGER.info 'pgm' {'message'}
 LOGGER.datetime_format = "%Y-%m-%d %H:%M:%S"
+PROGRESS_BAR_OPTIONS = {fmt: '%t |%B| %c of %C %p%%', lg: 80}
 
 # StringIO.open do |s|
 #   s.puts
