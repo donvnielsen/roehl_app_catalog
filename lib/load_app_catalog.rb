@@ -12,19 +12,24 @@ require_relative '../classes/log_formatter/log_server'
 require_relative '../classes/build_manager/build_def'
 require_relative '../app/models/server'
 require_relative '../app/models/roehl_application'
+require_relative '../classes/log_formatter/log_roehl_application'
 require_relative '../app/models/roehl_application_server'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
-  database: File.join(ROOT_DIR, CONFIG_DB['database'])
+  database: File.join(ROOT_DIR, CONFIG_DB['database']),
+  :logger => LOGGER
 )
+LOGGER.level = Logger::DEBUG
+LOGGER.info('Applications, Servers, App Server references')
 
 puts "Start #{Time.now}"
 
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 def propogate_servers(builds)
+  LOGGER.info(__method__.to_s)
   Server.destroy_all
   servers = builds.map {|build| build.server_name }.uniq
 
@@ -39,13 +44,17 @@ def propogate_servers(builds)
   servers.each {|server|
     pb.increment
     next if server.nil? || server.size == 0
-    Server.create(name: server) if Server.find_by_name(server).nil?
+    if Server.find_by_name(server).nil?
+      o = Server.create(name: server)
+      LOGGER.debug(LogServer.msg(o,'Created server')) if LOGGER.debug?
+    end
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
 def propogate_applications(builds)
+  LOGGER.info(__method__.to_s)
   RoehlApplication.destroy_all
   apps = builds.map {|build| build.app_name }.uniq
 
@@ -60,13 +69,17 @@ def propogate_applications(builds)
   apps.each {|app|
     pb.increment
     next if app.nil? || app.size == 0
-    RoehlApplication.create(name: app) if RoehlApplication.find_by_name(app).nil?
+    if RoehlApplication.find_by_name(app).nil?
+      o = RoehlApplication.create(name: app)
+      LOGGER.debug(LogRoehlApplication.msg(o,'Created application')) if LOGGER.debug?
+    end
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
 def propogate_references(builds)
+  LOGGER.info(__method__.to_s)
   pb = ProgressBar.create(
       title: __method__.to_s,
       total: builds.count,
@@ -91,6 +104,8 @@ def propogate_references(builds)
   }
 end
 
+LOGGER.info('Begin Applications, Servers, App Server References')
+
 # load builds with nokogiri
 builds = nil
 fname = File.join(CONFIG['datadir'], 'build_manager', 'BuildManager.xml')
@@ -112,4 +127,4 @@ propogate_servers(builds)
 propogate_applications(builds)
 propogate_references(builds)
 
-puts "End #{Time.now}"
+LOGGER.info('End Applications, Servers, App Server References')
