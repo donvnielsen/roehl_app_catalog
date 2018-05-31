@@ -7,7 +7,6 @@ gem 'standalone_migrations', '~> 5.2'
 gem 'ruby-progressbar', '~> 1.9'
 
 group :dev do
-  gem 'database_cleaner', '~> 1.7'
 end
 
 group :dev, :test do
@@ -15,4 +14,6 @@ group :dev, :test do
   gem 'rspec', '~> 3.7'
   gem 'rspec-rails', '~> 3.7'
   gem 'rspec-mocks', '~> 3.7'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'os'
 end
