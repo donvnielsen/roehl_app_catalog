@@ -12,10 +12,7 @@ require_relative '../classes/log_formatter/log_server'
 require_relative '../classes/build_manager/build_def'
 require_relative '../app/models/server'
 require_relative '../app/models/roehl_application'
-require_relative '../classes/log_formatter/log_roehl_application'
 require_relative '../app/models/roehl_application_server'
-require_relative '../classes/log_formatter/log_cluster'
-require_relative '../app/models/cluster'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
@@ -23,76 +20,42 @@ ActiveRecord::Base.establish_connection(
     database: File.join(ROOT_DIR, CONFIG_DB['database']),
     # logger: LOGGER
 )
-LOGGER.level = Logger::DEBUG
-LOGGER.info('Applications, Servers, App Server references')
 
 puts "Start #{Time.now}"
 
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
-def propagate_servers(builds)
-  LOGGER.info(__method__.to_s)
-  RoehlApplicationServer.destroy_all
+def propogate_servers(builds)
   Server.destroy_all
   servers = builds.map {|build| build.server_name }.uniq
 
   pb = ProgressBar.create(
-    title: __method__.to_s,
-    total: servers.count,
-    remainder_mark:'.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+      title: __method__.to_s,
+      total: servers.count,
+      remainder_mark:'.',
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   servers.each {|server|
     pb.increment
     next if server.nil? || server.size == 0
-    if Server.find_by_name(server).nil?
-      o = Server.create(name: server)
-      LOGGER.debug(LogServer.msg(o,'Created server')) if LOGGER.debug?
-    end
+    Server.create(name: server) if Server.find_by_name(server).nil?
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-def propagate_clusters(builds)
-  LOGGER.info(__method__.to_s)
-  Cluster.destroy_all
-  clusters = builds.map {|build| build.app_cluster_name }.uniq
-
-  pb = ProgressBar.create(
-    title: __method__.to_s,
-    total: clusters.count,
-    remainder_mark:'.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
-  )
-
-  clusters.each {|cluster|
-    pb.increment
-    next if cluster.nil? || cluster.size == 0
-    if Cluster.find_by_name(cluster).nil?
-      o = Cluster.create(name: cluster)
-      LOGGER.debug(LogCluster.msg(o,'Created cluster')) if LOGGER.debug?
-    end
-  }
-
-  pb.progress < pb.total ? pb.stop : pb.finish
-end
-
-def propagate_applications(builds)
-  LOGGER.info(__method__.to_s)
-  RoehlApplicationServer.destroy_all
+def propogate_applications(builds)
   RoehlApplication.destroy_all
   apps = builds.map {|build| {name: build.app_name, folder: build.folder} }.uniq
 
   pb = ProgressBar.create(
-    title: __method__.to_s,
-    total: apps.count,
-    remainder_mark: '.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+      title: __method__.to_s,
+      total: apps.count,
+      remainder_mark: '.',
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   apps.each {|app|
@@ -104,14 +67,13 @@ def propagate_applications(builds)
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-def propagate_application_servers(builds)
-  LOGGER.info(__method__.to_s)
+def propogate_references(builds)
   pb = ProgressBar.create(
-    title: __method__.to_s,
-    total: builds.count,
-    remainder_mark: '.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+      title: __method__.to_s,
+      total: builds.count,
+      remainder_mark: '.',
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   builds.each { |build|
@@ -124,17 +86,15 @@ def propagate_application_servers(builds)
     begin
       RoehlApplicationServer.create( roehl_application_id: app.id, server_id: server.id )
     rescue NoMethodError
-      pp build, build.app_name, app, build.server_name, server
+      pp build,build.app_name,app,build.server_name,server
       raise
     end
   }
 end
 
-LOGGER.info('Begin Applications, Servers, App Server References')
-
 # load builds with nokogiri
 builds = nil
-fname = File.join(CONFIG['buildmanagerdir'], 'BuildManager.xml')
+fname = File.join(CONFIG['datadir'], 'build_manager', 'BuildManager.xml')
 File.open(fname) {|f|
   doc = Nokogiri::XML(f) {|config| config.noblanks}
   buildmgr = doc.xpath('xmlns:BuildManagerData')
@@ -146,19 +106,11 @@ File.open(fname) {|f|
 }
 
 builds = builds.map { |build| BuildDef.new(build) }
-puts "# builds: #{builds.count}"
 
-propagate_servers(builds)
-# inject test server/directories for test purposes
-if ['dev','test'].include?(ENV['RAILS_ENV'])
-  Server.new(
-    name: 'pc1932',
-    description: 'server for dev/test testing'
-  ).save
-end
+RoehlApplicationServer.destroy_all
 
-propagate_applications(builds)
-propagate_application_servers(builds)
-propagate_clusters(builds)
+propogate_servers(builds)
+propogate_applications(builds)
+propogate_references(builds)
 
-LOGGER.info('End Applications, Servers, App Server References')
+puts "End #{Time.now}"
