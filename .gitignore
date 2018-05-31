@@ -8,4 +8,4 @@ pkg
 *.bak
 *.sln
 *.csproj
-config
+config/config*.yml
