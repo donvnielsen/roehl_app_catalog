@@ -5,7 +5,7 @@ require 'yaml'
 require 'nokogiri'
 require 'pp'
 
-ENV['RAILS_ENV'] = 'dev'
+ENV['RAILS_ENV'] = 'test'
 
 require_relative '../config/environment'
 require_relative '../classes/log_formatter/log_server'
@@ -32,8 +32,8 @@ def propogate_servers(builds)
       title: __method__.to_s,
       total: servers.count,
       remainder_mark:'.',
-      format: '%t |%B| %c of %C %p%%',
-      length: 80
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   servers.each {|server|
@@ -53,8 +53,8 @@ def propogate_applications(builds)
       title: __method__.to_s,
       total: apps.count,
       remainder_mark: '.',
-      format: '%t |%B| %c of %C %p%%',
-      length: 80
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   apps.each {|app|
@@ -71,8 +71,8 @@ def propogate_references(builds)
       title: __method__.to_s,
       total: builds.count,
       remainder_mark: '.',
-      format: '%t |%B| %c of %C %p%%',
-      length: 80
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   builds.each { |build|
