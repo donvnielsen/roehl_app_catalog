@@ -24,25 +24,24 @@ LOGGER.info('Migrations')
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 LOGGER.info('cleaning database')
-DatabaseCleaner.clean_with :truncation
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.clean
 
 solutions_dir = File.join(CONFIG['datadir'],'dockhours', 'solutions', '*.sln')
 # solutions_dir = File.join(ROOT_DIR, CONFIG['datadir'], 'solutions', 'RTI*.sln')
 # solutions_dir = File.join(ROOT_DIR, CONFIG['datadir'], 'solutions', 'a*.sln')
 solution_files = Dir.glob(solutions_dir, File::FNM_CASEFOLD).sort
-puts solutions_dir
-puts "Solution Files: #{solution_files.count}"
+
 LOGGER.info("solutions folder #{solutions_dir}")
-LOGGER.info("load_solutions start. # solutions = #{solution_files.count}")
+LOGGER.info("Begin load_solutions, qty = #{solution_files.count}")
+
+ProjectSolution.destroy_all
+Solution.destroy_all
 
 pb = ProgressBar.create(
-    title:'Solutions',
-    total:solution_files.count,
-    remainder_mark:'.',
-    format:'%t |%B| %c of %C %p%%',
-    length: 80
+    title: 'Solutions',
+    total: solution_files.count,
+    remainder_mark: '.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
 )
 
 solution_files.each {|fname|
@@ -74,4 +73,4 @@ solution_files.each {|fname|
 }
 
 pb.progress < pb.total ? pb.stop : pb.finish
-LOGGER.info('load_solutions finish')
+LOGGER.info('End load_solutions')
