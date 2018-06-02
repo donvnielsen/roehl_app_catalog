@@ -25,10 +25,9 @@ class BuildDef
     properties.has_key?(:appname) ? properties[:appname] : nil
   end
 
-  def folder
-    properties.has_key?(:webfolder) ? properties[:webfolder] : nil
+  def app_cluster_name
+    properties.has_key?(:appclustername) ? properties[:appclustername] : nil
   end
-
   private
 
   def init_elements(o)
