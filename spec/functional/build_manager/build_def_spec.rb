@@ -66,5 +66,10 @@ describe BuildDef do
       end
     end
 
+    context 'getting app cluster name' do
+      it 'should return app cluster name' do
+        expect(@bdef.app_cluster_name).to eq('MFDAC0001')
+      end
+    end
   end
 end

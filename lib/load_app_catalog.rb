@@ -14,6 +14,8 @@ require_relative '../app/models/server'
 require_relative '../app/models/roehl_application'
 require_relative '../classes/log_formatter/log_roehl_application'
 require_relative '../app/models/roehl_application_server'
+require_relative '../classes/log_formatter/log_cluster'
+require_relative '../app/models/cluster'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
@@ -30,6 +32,7 @@ ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 def propogate_servers(builds)
   LOGGER.info(__method__.to_s)
+  RoehlApplicationServer.destroy_all
   Server.destroy_all
   servers = builds.map {|build| build.server_name }.uniq
 
@@ -53,8 +56,34 @@ def propogate_servers(builds)
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
+def propogate_clusters(builds)
+  LOGGER.info(__method__.to_s)
+  Cluster.destroy_all
+  clusters = builds.map {|build| build.app_cluster_name }.uniq
+
+  pb = ProgressBar.create(
+      title: __method__.to_s,
+      total: clusters.count,
+      remainder_mark:'.',
+      format: PROGRESS_BAR_OPTIONS[:fmt],
+      length: PROGRESS_BAR_OPTIONS[:lg]
+  )
+
+  clusters.each {|cluster|
+    pb.increment
+    next if cluster.nil? || cluster.size == 0
+    if Cluster.find_by_name(cluster).nil?
+      o = Cluster.create(name: cluster)
+      LOGGER.debug(LogCluster.msg(o,'Created cluster')) if LOGGER.debug?
+    end
+  }
+
+  pb.progress < pb.total ? pb.stop : pb.finish
+end
+
 def propogate_applications(builds)
   LOGGER.info(__method__.to_s)
+  RoehlApplicationServer.destroy_all
   RoehlApplication.destroy_all
   apps = builds.map {|build| build.app_name }.uniq
 
@@ -121,10 +150,9 @@ File.open(fname) {|f|
 
 builds = builds.map { |build| BuildDef.new(build) }
 
-RoehlApplicationServer.destroy_all
-
-propogate_servers(builds)
-propogate_applications(builds)
-propogate_references(builds)
+# propogate_servers(builds)
+# propogate_applications(builds)
+# propogate_references(builds)
+propogate_clusters(builds)
 
 LOGGER.info('End Applications, Servers, App Server References')
