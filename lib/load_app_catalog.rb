@@ -5,7 +5,7 @@ require 'yaml'
 require 'nokogiri'
 require 'pp'
 
-ENV['RAILS_ENV'] = 'dev'
+ENV['RAILS_ENV'] = 'test'
 
 require_relative '../config/environment'
 require_relative '../classes/log_formatter/log_server'
@@ -16,8 +16,9 @@ require_relative '../app/models/roehl_application_server'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-  adapter: 'sqlite3',
-  database: File.join(ROOT_DIR, CONFIG_DB['database'])
+    adapter: CONFIG_DB['adapter'],
+    database: File.join(ROOT_DIR, CONFIG_DB['database']),
+    # logger: LOGGER
 )
 
 puts "Start #{Time.now}"
@@ -47,7 +48,7 @@ end
 
 def propogate_applications(builds)
   RoehlApplication.destroy_all
-  apps = builds.map {|build| build.app_name }.uniq
+  apps = builds.map {|build| {name: build.app_name, folder: build.folder} }.uniq
 
   pb = ProgressBar.create(
       title: __method__.to_s,
@@ -59,8 +60,8 @@ def propogate_applications(builds)
 
   apps.each {|app|
     pb.increment
-    next if app.nil? || app.size == 0
-    RoehlApplication.create(name: app) if RoehlApplication.find_by_name(app).nil?
+    next if app.nil? || app[:name] == 0
+    RoehlApplication.create(name: app[:name], folder: app[:folder]) if RoehlApplication.find_by_name(app[:name]).nil?
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish

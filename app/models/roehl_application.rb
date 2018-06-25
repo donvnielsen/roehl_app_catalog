@@ -2,6 +2,7 @@ require 'active_record'
 
 class RoehlApplication < ActiveRecord::Base
   validates :name,presence: true, uniqueness: {case_sensitive: false}
+  validates :folder,presence: true
 
   after_initialize :init
 
@@ -11,11 +12,13 @@ class RoehlApplication < ActiveRecord::Base
 
   def init
     self.name ||= ''
+    self.folder ||= ''
     self.description ||= ''
   end
 
   def strip_columns
     self.name.strip! unless self.name.nil?
+    self.folder.strip! unless self.folder.nil?
     self.description.strip! unless self.description.nil?
   end
 

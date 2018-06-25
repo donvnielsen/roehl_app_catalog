@@ -9,7 +9,7 @@ class LogFormatter < Logger::Formatter
     if o.to_s.strip.empty?
       "%-#{lg}s" % LogFormatter.NA_when_empty(nil)
     else
-      if o.is_a?(Fixnum)
+      if o.is_a?(Integer)
         s = "%0#{lg}d" % o.to_s.strip.to_i
       else
         s = o.to_s.strip

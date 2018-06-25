@@ -16,6 +16,7 @@ describe RoehlApplication do
     it 'should have errors for columns missing' do
       errors = RoehlApplication.create.errors
       expect(errors[:name]).to include("can't be blank")
+      expect(errors[:folder]).to include("can't be blank")
     end
   end
 
@@ -28,11 +29,11 @@ describe RoehlApplication do
     end
 
     it 'should not throw error when all is ok' do
-      expect(RoehlApplication.create(name:'RoehlApplication').valid?).to be_truthy
+      expect(RoehlApplication.create(name: 'RoehlApplication',folder: 'x').valid?).to be_truthy
     end
     it 'should throw error when attempt to add duplicate guid' do
-      expect(RoehlApplication.create(name:'app').valid?).to be_truthy
-      expect(RoehlApplication.create(name:'app').errors[:name])
+      expect(RoehlApplication.create(name:'app',folder:'x').valid?).to be_truthy
+      expect(RoehlApplication.create(name:'app',folder:'x').errors[:name])
           .to include('has already been taken')
     end
   end
@@ -41,11 +42,12 @@ describe RoehlApplication do
     before(:all) do
       @vb = ' App '
       @va = @vb.strip
-      @app = RoehlApplication.create(name:@vb,description:@vb)
+      @app = RoehlApplication.create(name:@vb,folder:@vb,description:@vb)
     end
 
     it 'should strip leading/trailing whitespace' do
       expect(@app[:name]).to eq(@va.downcase)
+      expect(@app[:folder]).to eq(@va)
       expect(@app[:description]).to eq(@va)
     end
     it 'should downcase columns' do

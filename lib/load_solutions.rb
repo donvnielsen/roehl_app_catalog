@@ -14,9 +14,9 @@ require_relative '../classes/log_formatter/log_project'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-    :adapter => 'sqlite3',
-    :database  => File.join(ROOT_DIR, CONFIG_DB['database']),
-    :logger => LOGGER
+    adapter: CONFIG_DB['adapter'],
+    database: File.join(ROOT_DIR, CONFIG_DB['database']),
+    # logger: LOGGER
 )
 LOGGER.level = Logger::INFO
 LOGGER.info('Migrations')
