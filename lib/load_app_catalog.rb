@@ -19,9 +19,9 @@ require_relative '../app/models/cluster'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-  adapter: 'sqlite3',
-  database: File.join(ROOT_DIR, CONFIG_DB['database']),
-  :logger => LOGGER
+    adapter: CONFIG_DB['adapter'],
+    database: File.join(ROOT_DIR, CONFIG_DB['database']),
+    # logger: LOGGER
 )
 LOGGER.level = Logger::DEBUG
 LOGGER.info('Applications, Servers, App Server references')
@@ -85,7 +85,7 @@ def propogate_applications(builds)
   LOGGER.info(__method__.to_s)
   RoehlApplicationServer.destroy_all
   RoehlApplication.destroy_all
-  apps = builds.map {|build| build.app_name }.uniq
+  apps = builds.map {|build| {name: build.app_name, folder: build.folder} }.uniq
 
   pb = ProgressBar.create(
       title: __method__.to_s,
@@ -97,11 +97,8 @@ def propogate_applications(builds)
 
   apps.each {|app|
     pb.increment
-    next if app.nil? || app.size == 0
-    if RoehlApplication.find_by_name(app).nil?
-      o = RoehlApplication.create(name: app)
-      LOGGER.debug(LogRoehlApplication.msg(o,'Created application')) if LOGGER.debug?
-    end
+    next if app.nil? || app[:name] == 0
+    RoehlApplication.create(name: app[:name], folder: app[:folder]) if RoehlApplication.find_by_name(app[:name]).nil?
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
