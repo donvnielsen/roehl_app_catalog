@@ -84,7 +84,7 @@ describe Project do
     end
     it 'should load csproj file into blob column' do
       prj = Project.create!(name:'blob',guid:'blob',file_name:TEST_PROJECT_FILE)
-      pp prj,prj.errors
+      # pp prj,prj.errors
       expect(prj[:csproj_file].size).to be > 0
     end
   end

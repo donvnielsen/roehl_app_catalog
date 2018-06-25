@@ -18,18 +18,16 @@ ActiveRecord::Base.establish_connection(
     # logger: LOGGER
 )
 
-puts "Start #{Time.now}"
+LOGGER.info("Begin load_projects, qty = #{Project.count}")
 
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
-ProjectProject.destroy_all
-
 pb = ProgressBar.create(
-    title:'LoadAllProjects',
-    total:Project.count,
-    remainder_mark:'.',
-    format:'%t |%B| %c of %C %p%%',
-    length: 80
+    title: 'Projects',
+    total: Project.count,
+    remainder_mark: '.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
 )
 
 Project.all.each {|prj|
@@ -43,4 +41,4 @@ Project.all.each {|prj|
 
 pb.progress < pb.total ? pb.stop : pb.finish
 
-puts "End #{Time.now}"
+LOGGER.info("End load_projects, projects = #{Project.count}")
