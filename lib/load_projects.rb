@@ -13,21 +13,23 @@ require_relative '../classes/log_formatter/log_project'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-    :adapter => 'sqlite3',
-    :database  => File.join(ROOT_DIR, CONFIG_DB['database']),
-    :logger => LOGGER
+    adapter: CONFIG_DB['adapter'],
+    database: File.join(ROOT_DIR, CONFIG_DB['database']),
+    # logger: LOGGER
 )
 
-LOGGER.info("Begin load_projects, qty = #{Project.count}")
+puts "Start #{Time.now}"
 
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
+ProjectProject.destroy_all
+
 pb = ProgressBar.create(
-    title: 'Projects',
-    total: Project.count,
-    remainder_mark: '.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+    title:'LoadAllProjects',
+    total:Project.count,
+    remainder_mark:'.',
+    format:'%t |%B| %c of %C %p%%',
+    length: 80
 )
 
 Project.all.each {|prj|
@@ -41,4 +43,4 @@ Project.all.each {|prj|
 
 pb.progress < pb.total ? pb.stop : pb.finish
 
-LOGGER.info("End load_projects, projects = #{Project.count}")
+puts "End #{Time.now}"
