@@ -9,7 +9,7 @@ LOG_DIR = File.expand_path(File.join(ROOT_DIR,'logs'))
 CONFIG = YAML::load(File.open(File.join(CONFIG_DIR,'config.yml')))[ENV['RAILS_ENV']]
 CONFIG_DB = YAML::load(File.open(File.join(CONFIG_DIR,'config_db.yml')))[ENV['RAILS_ENV']]
 
-LOGGER_FILE = nil # File.join(LOG_DIR,"#{Time.now.strftime('%Y%m%d_%H%M%S')}.log")
+LOGGER_FILE = File.join(LOG_DIR,"#{Time.now.strftime('%Y%m%d_%H%M%S')}.log")
 LOGGER = Logger.new(LOGGER_FILE)
 LOGGER.level = Logger::DEBUG  #,INFO,WARN,ERROR,FATAL,UNKNOWN
 # LOGGER.progname = 'testing' or LOGGER.info 'pgm' {'message'}

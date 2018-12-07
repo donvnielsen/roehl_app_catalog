@@ -134,7 +134,7 @@ LOGGER.info('Begin Applications, Servers, App Server References')
 
 # load builds with nokogiri
 builds = nil
-fname = File.join(CONFIG['datadir'], 'build_manager', 'BuildManager.xml')
+fname = File.join(CONFIG['buildmanagerdir'], 'BuildManager.xml')
 File.open(fname) {|f|
   doc = Nokogiri::XML(f) {|config| config.noblanks}
   buildmgr = doc.xpath('xmlns:BuildManagerData')
@@ -146,6 +146,7 @@ File.open(fname) {|f|
 }
 
 builds = builds.map { |build| BuildDef.new(build) }
+puts "# builds: #{builds.count}"
 
 # propogate_servers(builds)
 # propogate_applications(builds)
