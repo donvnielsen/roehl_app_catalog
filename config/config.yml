@@ -1,9 +1,12 @@
 dev: &dev
-  datadir: /home/dvn/Documents/roehl_app_catalog_test_data
   dbdir: db
+  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
+  branchdir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
 development: *dev
 
 test: &test
-  datadir: /home/dvn/Documents/roehl_app_catalog_test_data
   dbdir: db
-
+  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: c:/code/branches/niedo2/shared/windowapps/buildmanager/data
+  branchdir: c:/code/branches/niedo2

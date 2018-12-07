@@ -74,42 +74,42 @@ class CsprojFile
   end
 
   # when the number of project references is greater than zero,
-  # the recurse each one...looking into their project references.
+  # then recurse each one...looking into their project references.
   # eventually you reach projects that have no project references.
   # @param ovr string directory name override
   def recurse_projects(ovr=nil)
-    if @ref_projects.size > 0
-      @ref_projects.count.times {|i|
-        prj = @ref_projects.shift
+    return if @ref_projects.size.zero?
 
-        # this reference does not have to be recursed; it already has been.
-        # but a project reference does need to be created linking the
-        # current project to this reference.
-        if (p=Project.find_by_guid(prj[:guid]))
-          if (pp = ProjectProject.find_by_project_id(p.nil? ? -1 : p.id))
-            ProjectProject.create(project_id:self.prj.id, project_ref_id:pp.project_id)
-            LOGGER.debug(indent + prj[:name] + ' already logged') if LOGGER.debug?
-            next
-          end
+    @ref_projects.count.times {|i|
+      prj = @ref_projects.shift
+
+      # this reference does not have to be recursed; it already has been.
+      # but a project reference does need to be created linking the
+      # current project to this reference.
+      if (p=Project.find_by_guid(prj[:guid]))
+        if (pp = ProjectProject.find_by_project_id(p.nil? ? -1 : p.id))
+          ProjectProject.create(project_id:self.prj.id, project_ref_id:pp.project_id)
+          LOGGER.debug(indent + prj[:name] + ' already logged') if LOGGER.debug?
+          next
         end
-        LOGGER.debug(indent + prj[:name]) if LOGGER.debug?
+      end
+      LOGGER.debug(indent + prj[:name]) if LOGGER.debug?
 
-        # replace the projects directory name with the override directory when specified
-        fname = ovr.nil? ? prj[:file_name] : File.join(ovr, File.basename(prj[:file_name]))
+      # replace the projects directory name with the override directory when specified
+      fname = ovr.nil? ? prj[:file_name] : File.join(ovr, File.basename(prj[:file_name]))
 
-        csproj = CsprojFile.new(fname, prj[:guid], @idx)
-        csproj.recurse_projects(ovr)
+      csproj = CsprojFile.new(fname, prj[:guid], @idx)
+      csproj.recurse_projects(ovr)
 
-        # when returning from a recursion, create a reference from this
-        # project to the referenced project. It is a quiet create, meaning
-        # an exception is not thrown if the reference already exists
-        begin
-          ProjectProject.create(project_id:self.prj.id, project_ref_id:csproj.prj.id)
-        rescue NoMethodError
-          pp "\n",fname,csproj.prj,self.prj
-          raise
-        end
-      }
-    end
+      # when returning from a recursion, create a reference from this
+      # project to the referenced project. It is a quiet create, meaning
+      # an exception is not thrown if the reference already exists
+      begin
+        ProjectProject.create(project_id:self.prj.id, project_ref_id:csproj.prj.id)
+      rescue NoMethodError
+        pp "\n",fname,csproj.prj,self.prj
+        raise
+      end
+    }
   end
 end
