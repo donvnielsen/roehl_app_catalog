@@ -9,6 +9,7 @@ class Solution < ActiveRecord::Base
 
   after_initialize :init
   before_validation :load_solution_file
+  before_validation :cleanse_file_names
 
   # validates :name,presence: true,uniqueness: { case_sensitive: false }
   validates :file_name,presence: true
@@ -43,6 +44,11 @@ class Solution < ActiveRecord::Base
     fname = File.join(self.dir_name,self.file_name)
     self.sln_file = File.file?(fname) && File.exist?(fname) ?
                         File.readlines(fname).map {|ln| ln.chomp} : []
+  end
+
+  def cleanse_file_names
+    self.file_name.gsub!('\\','/') unless self.file_name.nil?
+    self.dir_name.gsub!('\\','/') unless self.dir_name.nil?
   end
 
   def self.create_from_filename!(fname)
