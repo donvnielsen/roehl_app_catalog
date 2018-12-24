@@ -1,4 +1,4 @@
-class CreateProjectsTable < ActiveRecord::Migration[5.1]
+class CreateProjectsTable < ActiveRecord::Migration[5.2]
   def change
     create_table :projects do |t|
       t.string :guid, unique:true
