@@ -13,9 +13,9 @@ require_relative '../classes/log_formatter/log_project'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-    adapter: CONFIG_DB['adapter'],
-    database: File.join(ROOT_DIR, CONFIG_DB['database']),
-    # logger: LOGGER
+  adapter: CONFIG_DB['adapter'],
+  database: File.join(ROOT_DIR, CONFIG_DB['database']),
+  # logger: LOGGER
 )
 
 LOGGER.info("Begin load_projects, qty = #{Project.count}")
@@ -23,11 +23,11 @@ LOGGER.info("Begin load_projects, qty = #{Project.count}")
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 pb = ProgressBar.create(
-    title: 'Projects',
-    total: Project.count,
-    remainder_mark: '.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+  title: 'Projects',
+  total: Project.count,
+  remainder_mark: '.',
+  format: PROGRESS_BAR_OPTIONS[:fmt],
+  length: PROGRESS_BAR_OPTIONS[:lg]
 )
 
 Project.all.each {|prj|

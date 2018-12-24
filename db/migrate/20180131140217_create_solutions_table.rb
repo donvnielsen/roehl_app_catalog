@@ -1,4 +1,4 @@
-class CreateSolutionsTable < ActiveRecord::Migration[5.1]
+class CreateSolutionsTable < ActiveRecord::Migration[5.2]
   def change
     create_table :solutions do |t|
       t.string :guid
