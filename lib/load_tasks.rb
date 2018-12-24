@@ -55,7 +55,8 @@ def propagate_task(server, tasks)
     task_xml.actions.each { |action|
       TaskAction.create!(
         task_id: task.id,
-        command: action.command,
+        command: [action.command, action.arguments].join(' '),
+        folder: File.dirname(action.command),
         executable: File.basename(action.command),
         parameters: action.arguments
       )
