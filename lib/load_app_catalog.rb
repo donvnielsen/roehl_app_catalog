@@ -19,9 +19,9 @@ require_relative '../app/models/cluster'
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 ActiveRecord::Base.establish_connection(
-    adapter: CONFIG_DB['adapter'],
-    database: File.join(ROOT_DIR, CONFIG_DB['database']),
-    # logger: LOGGER
+  adapter: 'sqlite3',
+  database: File.join(ROOT_DIR, CONFIG_DB['database']),
+  :logger => LOGGER
 )
 LOGGER.level = Logger::DEBUG
 LOGGER.info('Applications, Servers, App Server references')
@@ -30,18 +30,18 @@ puts "Start #{Time.now}"
 
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
-def propogate_servers(builds)
+def propagate_servers(builds)
   LOGGER.info(__method__.to_s)
   RoehlApplicationServer.destroy_all
   Server.destroy_all
   servers = builds.map {|build| build.server_name }.uniq
 
   pb = ProgressBar.create(
-      title: __method__.to_s,
-      total: servers.count,
-      remainder_mark:'.',
-      format: PROGRESS_BAR_OPTIONS[:fmt],
-      length: PROGRESS_BAR_OPTIONS[:lg]
+    title: __method__.to_s,
+    total: servers.count,
+    remainder_mark:'.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   servers.each {|server|
@@ -56,17 +56,17 @@ def propogate_servers(builds)
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-def propogate_clusters(builds)
+def propagate_clusters(builds)
   LOGGER.info(__method__.to_s)
   Cluster.destroy_all
   clusters = builds.map {|build| build.app_cluster_name }.uniq
 
   pb = ProgressBar.create(
-      title: __method__.to_s,
-      total: clusters.count,
-      remainder_mark:'.',
-      format: PROGRESS_BAR_OPTIONS[:fmt],
-      length: PROGRESS_BAR_OPTIONS[:lg]
+    title: __method__.to_s,
+    total: clusters.count,
+    remainder_mark:'.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   clusters.each {|cluster|
@@ -81,37 +81,40 @@ def propogate_clusters(builds)
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-def propogate_applications(builds)
+def propagate_applications(builds)
   LOGGER.info(__method__.to_s)
   RoehlApplicationServer.destroy_all
   RoehlApplication.destroy_all
-  apps = builds.map {|build| {name: build.app_name, folder: build.folder} }.uniq
+  apps = builds.map {|build| build.app_name }.uniq
 
   pb = ProgressBar.create(
-      title: __method__.to_s,
-      total: apps.count,
-      remainder_mark: '.',
-      format: PROGRESS_BAR_OPTIONS[:fmt],
-      length: PROGRESS_BAR_OPTIONS[:lg]
+    title: __method__.to_s,
+    total: apps.count,
+    remainder_mark: '.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   apps.each {|app|
     pb.increment
-    next if app.nil? || app[:name] == 0
-    RoehlApplication.create(name: app[:name], folder: app[:folder]) if RoehlApplication.find_by_name(app[:name]).nil?
+    next if app.nil? || app.size == 0
+    if RoehlApplication.find_by_name(app).nil?
+      o = RoehlApplication.create(name: app)
+      LOGGER.debug(LogRoehlApplication.msg(o,'Created application')) if LOGGER.debug?
+    end
   }
 
   pb.progress < pb.total ? pb.stop : pb.finish
 end
 
-def propogate_references(builds)
+def propagate_application_servers(builds)
   LOGGER.info(__method__.to_s)
   pb = ProgressBar.create(
-      title: __method__.to_s,
-      total: builds.count,
-      remainder_mark: '.',
-      format: PROGRESS_BAR_OPTIONS[:fmt],
-      length: PROGRESS_BAR_OPTIONS[:lg]
+    title: __method__.to_s,
+    total: builds.count,
+    remainder_mark: '.',
+    format: PROGRESS_BAR_OPTIONS[:fmt],
+    length: PROGRESS_BAR_OPTIONS[:lg]
   )
 
   builds.each { |build|
@@ -124,7 +127,7 @@ def propogate_references(builds)
     begin
       RoehlApplicationServer.create( roehl_application_id: app.id, server_id: server.id )
     rescue NoMethodError
-      pp build,build.app_name,app,build.server_name,server
+      pp build, build.app_name, app, build.server_name, server
       raise
     end
   }
@@ -134,7 +137,7 @@ LOGGER.info('Begin Applications, Servers, App Server References')
 
 # load builds with nokogiri
 builds = nil
-fname = File.join(CONFIG['datadir'], 'build_manager', 'BuildManager.xml')
+fname = File.join(CONFIG['buildmanagerdir'], 'BuildManager.xml')
 File.open(fname) {|f|
   doc = Nokogiri::XML(f) {|config| config.noblanks}
   buildmgr = doc.xpath('xmlns:BuildManagerData')
@@ -146,10 +149,19 @@ File.open(fname) {|f|
 }
 
 builds = builds.map { |build| BuildDef.new(build) }
+puts "# builds: #{builds.count}"
 
-# propogate_servers(builds)
-# propogate_applications(builds)
-# propogate_references(builds)
-propogate_clusters(builds)
+propagate_servers(builds)
+# inject test server/directories for test purposes
+if ['dev','test'].include?(ENV['RAILS_ENV'])
+  Server.new(
+    name: 'pc1932',
+    description: 'server for dev/test testing'
+  ).save
+end
+
+propagate_applications(builds)
+propagate_application_servers(builds)
+propagate_clusters(builds)
 
 LOGGER.info('End Applications, Servers, App Server References')

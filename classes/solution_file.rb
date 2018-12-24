@@ -5,10 +5,10 @@ require_relative '../classes/log_formatter/log_solution'
 require_relative '../classes/log_formatter/log_project'
 
 class SolutionFile
-  attr_reader :projects, :solution
+  attr_reader :projects, :solution, :dir_name
 
   class ProjectAttributes
-    attr_accessor :sln_guid,:prj_guid,:name,:fname,:id,:type
+    attr_accessor :sln_guid,:prj_guid,:name,:fname,:id,:type,:dir_name
 
     def sln_guid=(o)
       @sln_guid = o.nil? ? '' : o.strip.downcase
@@ -32,6 +32,7 @@ class SolutionFile
       # prj.fname = PARSE_CSPROJ_FILENAME.match(rhs2[1].strip).nil? ? '' : ($~)[:csprojname]
       @fname = rhs2[1].strip.gsub!(/^"|"?$/, '')
       @type = File.extname(@fname).downcase.delete('.')
+      @dir_name = File.dirname(@fname)
     end
   end
 
@@ -78,6 +79,7 @@ class SolutionFile
 
   def initialize(fname)
     @fname = fname
+    @dir_name = File.dirname(fname)
     raise ArgumentError,'fname must be specified' if @fname.nil?
     raise ArgumentError,'file name does not exist' unless File.exist?(@fname)
     @projects = SolutionFile::parse_projects_from_file(
@@ -98,7 +100,8 @@ class SolutionFile
       o = Project.find_by_guid(prj.prj_guid) ||
           Project.new(
               guid: prj.prj_guid,
-              file_name: ovr.nil? ? prj.fname : File.join(ovr,File.basename(prj.fname)),
+              dir_name: (ovr || File.join(@dir_name,File.dirname(prj.fname))),
+              file_name: File.basename(prj.fname),
               name: prj.name,
               ptype: File.extname(prj.fname)
           )

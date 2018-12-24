@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_02_133013) do
+ActiveRecord::Schema.define(version: 2018_12_07_150843) do
 
   create_table "application_types", force: :cascade do |t|
     t.string "name"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2018_06_02_133013) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "type"
+    t.string "folder"
   end
 
   create_table "roehl_applications_servers", force: :cascade do |t|
@@ -82,6 +83,32 @@ ActiveRecord::Schema.define(version: 2018_06_02_133013) do
     t.binary "sln_file", limit: 1048576
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.string "uri"
+    t.string "description"
+    t.string "xml", limit: 1048576
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks_actions", force: :cascade do |t|
+    t.integer "task_id"
+    t.string "command"
+    t.string "folder"
+    t.string "executable"
+    t.string "parameters"
+    t.index ["task_id"], name: "index_tasks_actions_on_task_id"
+  end
+
+  create_table "tasks_servers", force: :cascade do |t|
+    t.integer "task_id"
+    t.integer "server_id"
+    t.index ["server_id"], name: "index_tasks_servers_on_server_id"
+    t.index ["task_id", "server_id"], name: "tasks servers unique_index", unique: true
+    t.index ["task_id"], name: "index_tasks_servers_on_task_id"
   end
 
 end
