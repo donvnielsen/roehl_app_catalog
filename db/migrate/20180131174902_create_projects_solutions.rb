@@ -1,4 +1,4 @@
-class CreateProjectsSolutions < ActiveRecord::Migration[5.1]
+class CreateProjectsSolutions < ActiveRecord::Migration[5.2]
   def change
     create_table :projects_solutions do |t|
       t.belongs_to :solution
