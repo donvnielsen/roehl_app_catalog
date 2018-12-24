@@ -37,11 +37,11 @@ ProjectSolution.destroy_all
 Solution.destroy_all
 
 pb = ProgressBar.create(
-    title: 'Solutions',
-    total: solution_files.count,
-    remainder_mark: '.',
-    format: PROGRESS_BAR_OPTIONS[:fmt],
-    length: PROGRESS_BAR_OPTIONS[:lg]
+  title: 'Solutions',
+  total: solution_files.count,
+  remainder_mark: '.',
+  format: PROGRESS_BAR_OPTIONS[:fmt],
+  length: PROGRESS_BAR_OPTIONS[:lg]
 )
 
 solution_files.each {|fname|

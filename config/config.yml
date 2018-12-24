@@ -1,12 +1,15 @@
 dev: &dev
   dbdir: db
-  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
-  buildmanagerdir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
-  branchdir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
+  datadir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
+  branchdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
+  taskssubdir: c$/Users/niedo/Documents/roehl_app_catalog_test_data/services_and_tasks/tasks
+
 development: *dev
 
 test: &test
   dbdir: db
-  datadir: C:/Users/niedo/Documents/roehl_app_catalog_test_data
-  buildmanagerdir: c:/code/branches/niedo2/shared/windowapps/buildmanager/data
-  branchdir: c:/code/branches/niedo2
+  datadir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: //pc1932/c$/code/branches/niedo2/shared/windowapps/buildmanager/data
+  branchdir: //pc1932/c$/code/branches/niedo2
+  taskssubdir: c$/Users/niedo/Documents/roehl_app_catalog_test_data/services_and_tasks/tasks
