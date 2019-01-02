@@ -6,8 +6,8 @@ class ProjectSolution < ActiveRecord::Base
   belongs_to :solutions
   belongs_to :projects
 
-  validates :solution_id,presence: true
-  validates :project_id,presence: true, uniqueness: { scope: :solution_id }
+  validates :solution_id, presence: true
+  validates :project_id, presence: true, uniqueness: { scope: :solution_id }
 
   validate :check_solution_references
 

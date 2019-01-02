@@ -34,7 +34,10 @@ class Task < ActiveRecord::Base
   end
 
   def create_from_filename!(txf)
-    self.xml = txf.xml.encode('UTF-8', 'UTF-16')
+    unless txf.is_a?(TaskXmlFile)
+      raise ArgumentError, 'txf parameter must be an intance of TaskXmlFile'
+    end
+    self.xml = txf.xml
     self.name = txf.name
     self.uri = txf.uri
     self.description = txf.description

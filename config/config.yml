@@ -1,4 +1,5 @@
 dev: &dev
+  hostname: //pc1932
   dbdir: db
   datadir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
   buildmanagerdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
@@ -13,3 +14,11 @@ test: &test
   buildmanagerdir: //pc1932/c$/code/branches/niedo2/shared/windowapps/buildmanager/data
   branchdir: //pc1932/c$/code/branches/niedo2
   taskssubdir: c$/Users/niedo/Documents/roehl_app_catalog_test_data/services_and_tasks/tasks
+
+mintdev:
+  hostname: //dvn-Latitude-E6510
+  dbdir: db
+  datadir: /home/dvn/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: /home/dvn/Documents/roehl_app_catalog_test_data/build_manager
+  branchdir: /home/dvn/Documents/roehl_app_catalog_test_data/dockhours
+  taskssubdir: /home/dvn/Documents/roehl_app_catalog_test_data/services_and_tasks/tasks

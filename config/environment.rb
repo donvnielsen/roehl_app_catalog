@@ -1,6 +1,8 @@
 require 'logger'
 require 'yaml'
 
+ENV['RAILS_ENV'] = 'mintdev'
+
 ROOT_DIR = File.expand_path(File.join(File.dirname(__FILE__),'..'))
 CONFIG_DIR = File.expand_path(File.join(ROOT_DIR,'config'))
 SPEC_DIR = File.expand_path(File.join(ROOT_DIR,'spec'))
@@ -25,5 +27,4 @@ PROGRESS_BAR_OPTIONS = {fmt: '%t |%B| %c of %C %p%%', lg: 80}
 PARSE_GUID = /[{(]?(?<guid>[0-9A-F]{8}[-]?([0-9A-F]{4}[-]?){3}[0-9A-F]{12})[)}]?/
 PARSE_CSPROJ_FILENAME = /\"(?<csprojname>((?:[^\/]*\/)*)([A-Za-z0-9_]+\.csproj))\"/
 PARSE_PROJECT_NAME = /\"(?<prjname>[A-Za-z0-9._-]+)\"/
-
-
+PARSE_CMD_LINE_STRING = /^(?:"([^"]+(?="))|([^\s]+))["]{0,1} *(.+)?$/

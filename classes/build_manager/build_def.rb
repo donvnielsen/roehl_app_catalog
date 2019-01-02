@@ -28,6 +28,7 @@ class BuildDef
   def app_cluster_name
     properties.has_key?(:appclustername) ? properties[:appclustername] : nil
   end
+
   private
 
   def init_elements(o)

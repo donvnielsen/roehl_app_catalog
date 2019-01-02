@@ -4,6 +4,7 @@ dev: &dev
   pool: 5
   timeout: 5000
 development: *dev
+mintdev: *dev
 
 prod:
   adapter: sqlite3

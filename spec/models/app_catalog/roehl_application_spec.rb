@@ -16,7 +16,7 @@ describe RoehlApplication do
     it 'should have errors for columns missing' do
       errors = RoehlApplication.create.errors
       expect(errors[:name]).to include("can't be blank")
-      expect(errors[:folder]).to include("can't be blank")
+      # expect(errors[:folder]).to include("can't be blank")
     end
   end
 

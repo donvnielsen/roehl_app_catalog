@@ -9,15 +9,14 @@ describe ProjectSolution do
     # ProjectSolution.destroy_all
     # Project.destroy_all
     # Solution.destroy_all
-    solution_files = Dir.glob(File.join(File.dirname(__FILE__),'data','*.sln')).sort
-    solution_files.each {|fname|
+    solution_files = Dir.glob(File.join(File.dirname(__FILE__),'data', '*.sln')).sort
+    solution_files.each do |fname|
       @sf = SolutionFile.new(fname)
-      unless @sf.nil?
-        @sf.create_solution_projects
-        @sf.create_new_solution_from_file
-        @sf.relate_projects_to_solutions
-      end
-    }
+      next if @sf.nil?
+      @sf.create_solution_projects
+      @sf.create_new_solution_from_file
+      @sf.relate_projects_to_solutions
+    end
   end
 
   def test_solution_count(sln,qty)

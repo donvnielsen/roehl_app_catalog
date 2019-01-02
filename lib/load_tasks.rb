@@ -5,8 +5,6 @@ require 'yaml'
 require 'nokogiri'
 require 'pp'
 
-ENV['RAILS_ENV'] = 'test'
-
 require_relative '../config/environment'
 require_relative '../classes/log_formatter/log_task'
 require_relative '../app/models/server'

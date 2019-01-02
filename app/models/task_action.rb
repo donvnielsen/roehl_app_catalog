@@ -25,11 +25,8 @@ class TaskAction < ActiveRecord::Base
     self.parameters ||= ''
 
     unless self.command.empty?
-      cmdline = PARSE_CMD_LINE_STRING.match(self.command)
-      self.command = cmdline[1] || cmdline[2] if self.command.empty?
-      self.folder = File.dirname(self.command) if self.folder.empty?
-      self.executable = File.basename(self.command) if self.executable.empty?
-      self.parameters = cmdline[3] if self.parameters.empty?
+      self.folder = File.dirname(command) if self.folder.empty?
+      self.executable = File.basename(command) if self.executable.empty?
     end
   end
 

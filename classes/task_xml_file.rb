@@ -21,7 +21,7 @@ class TaskXmlFile
     info = task.xpath('xmlns:RegistrationInfo')
     @description = element_content(info, 'xmlns:Description')
     @uri = element_content(info, 'xmlns:URI')
-    @name = File.basename(@uri)
+    @name = File.basename(@uri).tr('\\', '')
 
     @actions = []
     execs = task.xpath('xmlns:Actions').xpath('xmlns:Exec')

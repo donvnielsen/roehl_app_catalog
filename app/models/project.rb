@@ -1,14 +1,17 @@
 require 'active_record'
+require_relative '../../classes/log_formatter/log_project'
 
 class Project < ActiveRecord::Base
   serialize :csproj_file
 
   has_many :project_solution, dependent: :destroy
 
-  validates :name,presence: true
-  validates :guid,presence: true, uniqueness: {case_sensitive: false}
+  validates :name, presence: true
+  validates :guid, presence: true, uniqueness: { case_sensitive: false }
+  validates :file_name, presence: true
 
   after_initialize :init
+  after_create :log_new_project
 
   before_validation :strip_columns, :downcase_columns
   before_validation :cleanse_file_names,:cleanse_ptype
@@ -23,9 +26,11 @@ class Project < ActiveRecord::Base
   end
 
   def init
-    self.dir_name ||= File.dirname(self.file_name)
-    self.ptype ||= File.extname(self.file_name).delete('.')
-    self.name ||= File.basename(self.file_name,'.*')
+    unless self.file_name.nil?
+      self.dir_name ||= File.dirname(self.file_name)
+      self.ptype ||= File.extname(self.file_name).delete('.')
+      self.name ||= File.basename(self.file_name,'.*')
+    end
   end
 
   def downcase_columns
@@ -41,8 +46,8 @@ class Project < ActiveRecord::Base
   end
 
   def cleanse_file_names
-    self.file_name.gsub!('\\','/') unless self.file_name.nil?
-    self.dir_name.gsub!('\\','/') unless self.dir_name.nil?
+    self.file_name.tr!('\\', '/') unless self.file_name.nil?
+    self.dir_name.tr!('\\', '/') unless self.dir_name.nil?
   end
 
   def cleanse_ptype
@@ -58,4 +63,7 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def log_new_project
+    LOGGER.debug(LogProject.msg(self, 'Created project')) if LOGGER.debug?
+  end
 end

@@ -34,9 +34,9 @@ describe ProjectSolution do
     end
     it 'should throw error when solution id is unknown' do
       tname = 'index prj id test'
-      sln = Solution.create(name:tname,file_name:tname,dir_name:tname,
+      sln = Solution.create(name: tname, file_name: tname, dir_name: tname,
                             guid:SecureRandom.uuid)
-      prj = Project.create(guid:tname,name:tname)
+      prj = Project.create(guid: tname, name: tname, file_name: tname)
       expect{ProjectSolution.create!(solution_id:sln.id, project_id:prj.id)}
           .to_not raise_error
     end
@@ -46,8 +46,8 @@ describe ProjectSolution do
     before(:all) do
       DatabaseCleaner.clean
       tname = 'solution|project uniqueness'
-      Solution.create!(name:tname,file_name:tname,dir_name:tname,guid:tname)
-      Project.create!(name:tname,guid:tname)
+      Solution.create!(name: tname, file_name: tname, dir_name: tname, guid: tname)
+      Project.create!(name: tname, guid: tname, file_name: tname)
     end
     it 'should throw error with duplicate entry' do
       ProjectSolution.create!(solution_id:Solution.last.id,

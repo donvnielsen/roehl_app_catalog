@@ -17,6 +17,7 @@ describe Project do
       errors = Project.create.errors
       expect(errors[:guid]).to include("can't be blank")
       expect(errors[:name]).to include("can't be blank")
+      expect(errors[:file_name]).to include("can't be blank")
     end
   end
 
@@ -29,11 +30,11 @@ describe Project do
     end
 
     it 'should not throw error when all is ok' do
-      expect(Project.create(name:'prj',guid:'prj').valid?).to be_truthy
+      expect(Project.create(name: 'prj', guid: 'prj', file_name: '/folder/file_name.txt').valid?).to be_truthy
     end
     it 'should throw error when attempt to add duplicate guid' do
-      expect(Project.create(name:'prj',guid:'prj').valid?).to be_truthy
-      expect(Project.create(name:'prj',guid:'prj').errors[:guid])
+      expect(Project.create(name: 'prj', guid: 'prj', file_name: '/folder/file_name.txt').valid?).to be_truthy
+      expect(Project.create(name: 'prj', guid: 'prj', file_name: '/folder/file_name.txt').errors[:guid])
           .to include('has already been taken')
     end
   end
@@ -64,14 +65,14 @@ describe Project do
 
     it 'should convert backslashes to forward slashes' do
       fname = 'c:\this\has\forward\slashes'
-      prj = Project.new(name:'prj',guid:'prj',file_name:fname)
+      prj = Project.new(name: 'prj', guid: 'prj', file_name: fname)
       prj.validate
       expect(prj[:file_name]).to eq(fname.gsub('\\','/'))
     end
 
     it 'remove periods from columns' do
       ptype = '.csproj'
-      prj = Project.create(name:'prj',guid:'prj',ptype: ptype)
+      prj = Project.create(name: 'prj', guid: 'prj', ptype: ptype, file_name: '/folder/file_name.txt')
       prj.validate
       expect(prj[:ptype]).to eq(ptype.delete('.'))
     end

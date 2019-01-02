@@ -1,6 +1,5 @@
 require 'active_record'
-
-# if name is empty, attempt to extract if from solution file
+require_relative '../../classes/log_formatter/log_solution'
 
 class Solution < ActiveRecord::Base
   serialize :sln_file
@@ -12,12 +11,14 @@ class Solution < ActiveRecord::Base
   before_validation :cleanse_file_names
 
   # validates :name,presence: true,uniqueness: { case_sensitive: false }
-  validates :file_name,presence: true
-  validates :dir_name,presence: true
-  validates :guid,presence: true
-  validates :name,presence: true, uniqueness: {case_sensitive: false}
+  validates :file_name, presence: true
+  validates :dir_name, presence: true
+  validates :guid, presence: true
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
 
-  before_save :strip_columns,:downcase_columns
+  before_save :strip_columns, :downcase_columns
+
+  after_create :log_new_solution
 
   ERR_INVALID_ID = 'id must reference existing solution'
 
@@ -43,7 +44,7 @@ class Solution < ActiveRecord::Base
   def load_solution_file
     fname = File.join(self.dir_name,self.file_name)
     self.sln_file = File.file?(fname) && File.exist?(fname) ?
-                        File.readlines(fname).map {|ln| ln.chomp} : []
+                    File.readlines(fname).map {|ln| ln.chomp} : []
   end
 
   def cleanse_file_names
@@ -58,12 +59,15 @@ class Solution < ActiveRecord::Base
     return nil unless File.exist?(fname)
 
     Solution.create!(
-        dir_name: File.dirname(fname),
-        file_name: File.basename(fname),
-        guid: '?',
-        name: File.basename(fname,'.*'),
+      dir_name: File.dirname(fname),
+      file_name: File.basename(fname),
+      guid: '?',
+      name: File.basename(fname, '.*'),
     )
 
   end
 
+  def log_new_solution
+    LOGGER.debug(LogSolution.msg(self, 'Completed solution')) if LOGGER.debug?
+  end
 end

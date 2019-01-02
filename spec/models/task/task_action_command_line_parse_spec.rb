@@ -34,7 +34,6 @@ describe 'Tests cmd line regex parser' do
   context 'program within quotes' do
     before(:all) do
       @regex = TaskAction::PARSE_CMD_LINE_STRING.match('"c:/folder/program.exe"')
-      pp @regex
     end
 
     it 'will identify the executable' do
@@ -49,7 +48,6 @@ describe 'Tests cmd line regex parser' do
   context 'program without quotes' do
     before(:all) do
       @regex = TaskAction::PARSE_CMD_LINE_STRING.match('c:/folder/program.exe')
-      pp @regex
     end
 
     it 'will identify the executable' do

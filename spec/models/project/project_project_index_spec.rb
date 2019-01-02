@@ -30,16 +30,16 @@ describe ProjectProject do
     before(:all) do
       DatabaseCleaner.clean
       @tname = 'index proj id test'
-      @prj1 = Project.create!(name:@tname,guid:@tname+'_1')
+      @prj1 = Project.create!(name: @tname, guid: @tname + '_1', file_name: '/folder/filename.txt')
     end
 
     it 'should throw error when project id is known, project reference id unknown' do
-      errors = ProjectProject.create(project_id:0,project_ref_id:0).errors
+      errors = ProjectProject.create(project_id: 0, project_ref_id: 0).errors
       expect(errors[:project_id]).to include(Project::ERR_INVALID_ID)
       expect(errors[:project_ref_id]).to include(Project::ERR_INVALID_ID)
     end
     it 'should throw error when project id is unknown' do
-      @prj2 = Project.create!(name:@tname,guid:@tname+'_2')
+      @prj2 = Project.create!(name: @tname, guid: @tname + '_2', file_name: '/folder/file_name.txt')
       errors = ProjectProject.create(project_id:@prj1.id,project_ref_id:@prj2.id).errors
       expect(errors[:project_ref_id]).to be_empty
     end
