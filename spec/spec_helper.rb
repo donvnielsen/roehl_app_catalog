@@ -5,10 +5,10 @@ require 'sqlite3'
 require 'stringio'
 require 'database_cleaner'
 require 'os'
-
 require 'pp'
 
-ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ENV'] = 'dev'
+
 require_relative '../config/environment'
 
 SPEC_DATA_DIR = if OS.posix?

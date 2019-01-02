@@ -2,7 +2,7 @@ dev: &dev
   hostname: //pc1932
   dbdir: db
   datadir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
-  buildmanagerdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
+  buildmanagerdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data/build_manager
   branchdir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
   taskssubdir: c$/Users/niedo/Documents/roehl_app_catalog_test_data/services_and_tasks/tasks
 

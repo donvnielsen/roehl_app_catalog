@@ -12,10 +12,10 @@ describe BuildDef do
 
   context 'initialize' do
     it 'should throw error when not xml node' do
-      expect{BuildDef.new(nil)}.to raise_error(ArgumentError)
+      expect { BuildDef.new(nil) }.to raise_error(ArgumentError)
     end
     it 'should accept an xml builds element' do
-      expect{BuildDef.new(@buildmgr.xpath('xmlns:Builds').first)}.to_not raise_error
+      expect { BuildDef.new(@buildmgr.xpath('xmlns:Builds').first) }.to_not raise_error
     end
   end
 
@@ -29,7 +29,7 @@ describe BuildDef do
         expect(@bdef.properties.is_a?(Hash)).to be_truthy
       end
       it 'should have parsed keys' do
-        [:localbuildfolder,:webfolder,:server,:appname].each {|p|
+        [:localbuildfolder, :webfolder, :server, :appname].each { |p|
           expect(@bdef.properties.include?(p.downcase)).to be_truthy
         }
       end
