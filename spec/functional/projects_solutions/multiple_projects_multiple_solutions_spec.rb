@@ -9,7 +9,9 @@ describe ProjectSolution do
     # ProjectSolution.destroy_all
     # Project.destroy_all
     # Solution.destroy_all
-    solution_files = Dir.glob(File.join(File.dirname(__FILE__),'data', '*.sln')).sort
+    tdir = File.join(File.dirname(__FILE__), 'data', '*.sln')
+    puts tdir
+    solution_files = Dir.glob(tdir).sort
     solution_files.each do |fname|
       @sf = SolutionFile.new(fname)
       next if @sf.nil?

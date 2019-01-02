@@ -1,9 +1,14 @@
 require 'standalone_migrations'
 require_relative '../config/environment'
 
+ENV['RAILS_ENV'] = 'test'
+
+dbname = File.join(ROOT_DIR, CONFIG_DB['database'])
+puts "writing to db '#{dbname}'"
+
 ActiveRecord::Base.establish_connection(
   adapter: CONFIG_DB['adapter'],
-  database: File.join(ROOT_DIR, CONFIG_DB['database']),
+  database: dbname,
   logger: LOGGER
 )
 LOGGER.level = Logger::DEBUG
