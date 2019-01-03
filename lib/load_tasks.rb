@@ -26,7 +26,7 @@ puts "Start #{Time.now}"
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 # for each task, create entry and parse actions
-def propagate_task(server, tasks)
+def populate_task(server, tasks)
   server_tasks = Dir.glob(File.join(tasks,'*.xml'))
   return if server_tasks.nil?
   LOGGER.info("Server #{server.name} tasks #{server_tasks.count}")
@@ -66,15 +66,16 @@ end
 
 Task.destroy_all
 TaskServer.destroy_all
+TaskAction.destroy_all
 
 # look for tasks folders in each server. if found, then process
 # each xml file in that folder, ensuring it is for a task.
+pp ENV['RAILS_ENV']
 Server.all.each do |server|
-  next unless ['dev','test'].include?(ENV['RAILS_ENV']) && server.name.include?('pc1932')
+  next unless ['dev','test','mintdev'].include?(ENV['RAILS_ENV']) && server.name.include?('pc1932')
 
   tasks_dir = File.join('//',server.name, CONFIG['taskssubdir'])
-  propagate_task(server, tasks_dir) if Dir.exist?(tasks_dir)
-  # relate tasks to server
+  populate_task(server, tasks_dir) if Dir.exist?(tasks_dir)
 end
 
 LOGGER.info("End load_tasks, tasks = #{Task.count}")

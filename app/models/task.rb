@@ -5,7 +5,8 @@ require_relative '../../classes/task_xml_file'
 class Task < ActiveRecord::Base
   self.table_name = 'tasks'
 
-  has_many :task_actions
+  has_many :task_actions, dependent: :delete_all
+  has_many :task_servers, dependent: :delete_all
 
   validates :name, presence: true
   validates :uri, presence: true
