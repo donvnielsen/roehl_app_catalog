@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
 
   after_initialize :init
 
-  before_save :strip_columns,:downcase_columns
+  before_save :strip_columns, :downcase_columns
 
   ERR_INVALID_ID = 'id must reference existing task'
 
