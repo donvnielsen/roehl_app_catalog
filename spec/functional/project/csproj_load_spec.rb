@@ -1,19 +1,5 @@
 require 'spec_helper'
 require_relative '../../../classes/csproj_file'
-require 'nokogiri'
-
-def extract_projects(fname)
-  File.open(fname) {|f|
-    doc = Nokogiri::XML(f) {|config| config.noblanks}
-    prj = doc.xpath('xmlns:Project')
-    groups = prj.xpath('xmlns:ItemGroup')
-    groups.each_with_index {|g,i|
-      prefs = g.xpath('xmlns:ProjectReference')
-      return prefs unless prefs.nil?
-    }
-  }
-  nil
-end
 
 describe CsprojFile do
   before(:all) do
@@ -39,7 +25,7 @@ describe CsprojFile do
   context 'Validate constructor' do
     before(:all) do
       DatabaseCleaner.clean
-      @csproj = CsprojFile.new(TEST_PROJECT_FILE,@guid,0)
+      @csproj = CsprojFile.new(TEST_PROJECT_FILE, @guid, 0)
     end
 
     it 'should increment the index' do
@@ -81,12 +67,7 @@ describe CsprojFile do
       @csproj.recurse_projects(File.join(File.join(SPEC_DATA_DIR,'dockhours', 'projects')))
       expect(Project.count).to eq(8)
     end
-    # it 'should extract project references from csproj file' do
-    #   @prefs.each {|pref|
-    #     pp CsprojFile.parse_project_reference(pref)
-    #     expect(Project.find_by_name(name).count).to eq(1)
-    #   }
-    # end
+
   end
 
 end

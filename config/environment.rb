@@ -1,7 +1,7 @@
 require 'logger'
 require 'yaml'
 
-ENV['RAILS_ENV'] = 'mintdev'
+ENV['RAILS_ENV'] = 'dev'
 
 ROOT_DIR = File.expand_path(File.join(File.dirname(__FILE__),'..'))
 CONFIG_DIR = File.expand_path(File.join(ROOT_DIR,'config'))

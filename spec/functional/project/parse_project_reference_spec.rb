@@ -4,16 +4,12 @@ require_relative '../../../classes/csproj_file'
 describe CsprojFile do
   before(:all) do
     File.open(TEST_PROJECT_FILE) {|f|
-      doc = Nokogiri::XML(f) {|config| config.noblanks}
-      prj = doc.xpath('xmlns:Project')
-      groups = prj.xpath('xmlns:ItemGroup')
-      groups.each_with_index {|g,i|
-        projectreferences = g.xpath('xmlns:ProjectReference')
-        unless projectreferences.nil? || projectreferences.count == 0
-          @ref = CsprojFile::parse_project_reference(projectreferences.first)
-          break
-        end
-      }
+      doc = REXML::Document.new f
+      project_references = REXML::XPath.match(doc, 'Project/ItemGroup/ProjectReference')
+      unless project_references.nil? || project_references.count == 0
+        @ref = CsprojFile::parse_project_reference(project_references.first)
+        break
+      end
     }
   end
 

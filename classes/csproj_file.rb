@@ -1,5 +1,5 @@
 require 'ruby-progressbar'
-require 'nokogiri'
+require 'rexml/document'
 
 require_relative '../app/models/solution'
 require_relative '../app/models/project'
@@ -8,13 +8,15 @@ require_relative '../app/models/project_project_index'
 class CsprojFile
   attr_reader :idx, :guid, :fname, :ref_projects, :prj
 
+  # extract file name, guid id, and name from ItemGroup Reference
   def self.parse_project_reference(ref)
-    raise ArgumentError unless ref.is_a?(Nokogiri::XML::Element)
+    raise ArgumentError unless ref.is_a?(REXML::Element)
+    # raise ArgumentError unless ref.is_a?(Nokogiri::XML::Element)
     rc = { file_name: ref['Include'].tr('\\', '/') }
-    ref.element_children.each {|child|
+    ref.elements.each do |child|
       rc[:guid] = child.text.match(/\{(?<guid>.*)\}/)[:guid].downcase if child.name == "Project"
       rc[:name] = child.text if child.name == 'Name'
-    }
+    end
     rc
   end
 
@@ -22,10 +24,10 @@ class CsprojFile
     sprintf('%3d. ' + chr*(@idx-1)*2, @idx)
   end
 
-  def initialize(fname,guid,index=0)
-    raise ArgumentError,'File name must be provided' if fname.nil?
-    raise ArgumentError,'Guid must be provided' if guid.nil?
-    raise ArgumentError,'Index must be not nil and 0 or greater' if index.nil? || index < 0
+  def initialize(fname, guid, index = 0)
+    raise ArgumentError, 'File name must be provided' if fname.nil?
+    raise ArgumentError, 'Guid must be provided' if guid.nil?
+    raise ArgumentError, 'Index must be not nil and not negative' if index.nil? || index < 0
     @fname = fname
     @guid = guid
     @idx = index + 1
@@ -48,39 +50,28 @@ class CsprojFile
 
   # load the specified csproj file
   def load_projects
-    # raise ArgumentError, "Bad file name #{self.fname}" unless File.exist?(self.fname)
     @ref_projects = []
-    if File.exist?(self.fname)
-      File.open(self.fname) {|f|
-        doc = Nokogiri::XML(f) {|config| config.noblanks}
-        begin
-          prj = doc.xpath('xmlns:Project')
-        rescue Nokogiri::XML::XPath::SyntaxError
-          return
-        end
-        groups = prj.xpath('xmlns:ItemGroup')
-        groups.each_with_index {|g,i|
-          projectreferences = g.xpath('xmlns:ProjectReference')
-          unless projectreferences.nil? || projectreferences.count == 0
-            projectreferences.each {|prjref|
-              @ref_projects << CsprojFile.parse_project_reference(prjref)
-            }
-          end
-        }
-      }
-    end
-    @ref_projects
+    return @ref_projects unless File.exist?(fname)
 
+    File.open(fname) do |f|
+      doc = REXML::Document.new f
+      project_references = REXML::XPath.match(doc, 'Project/ItemGroup/ProjectReference')
+      unless project_references.nil?
+        project_references.each { |ref| @ref_projects << CsprojFile.parse_project_reference(ref) }
+      end
+    end
+
+    @ref_projects
   end
 
   # when the number of project references is greater than zero,
   # then recurse each one...looking into their project references.
   # eventually you reach projects that have no project references.
   # @param ovr string directory name override
-  def recurse_projects(ovr=nil)
+  def recurse_projects(ovr = nil)
     return if @ref_projects.size.zero?
 
-    @ref_projects.count.times {|i|
+    @ref_projects.count.times do |i|
       prj = @ref_projects.shift
 
       # this reference does not have to be recursed; it already has been.
@@ -110,6 +101,6 @@ class CsprojFile
         pp "\n", fname, csproj.prj,self.prj
         raise
       end
-    }
+    end
   end
 end

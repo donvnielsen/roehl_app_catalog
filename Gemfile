@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'nokogiri', '~> 1.8'
 gem 'activerecord', '~> 5.2'
 gem 'activemodel', '~> 5.2'
 gem 'standalone_migrations', '~> 5.2'
