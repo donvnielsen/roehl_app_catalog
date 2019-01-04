@@ -3,7 +3,6 @@ require 'rexml/document'
 include REXML
 
 fname = 'C:\Users\niedo\Documents\roehl_app_catalog_test_data\dockhours\projects\accountingportal.csproj'
-
 puts File.exist?(fname)
 
 =begin
