@@ -1,9 +1,9 @@
-require 'rspec'
+require 'spec_helper'
+
 
 describe 'Parse the service xml file' do
-
-  it 'should do something' do
-
-    true.should == false
-  end
+  it 'will trap when invalid object is sent'
+  it 'will extract the name'
+  it 'will extract the display name'
+  it 'will extract the path name'
 end

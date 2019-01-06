@@ -1,4 +1,4 @@
-require 'nokogiri'
+require 'rexml/document'
 
 class TaskXMLAction
   attr_reader :exec, :command, :arguments
@@ -11,10 +11,10 @@ class TaskXMLAction
   private
 
   def parse_xml_exec
-    cmd = @exec.xpath('xmlns:Command')
-    @command = cmd.empty? ? '' : cmd.first.content
-    args = @exec.xpath('xmlns:Arguments')
-    @arguments = args.empty? ? '' : args.first.content
+    cmd = REXML::XPath.match(@exec, 'Command')
+    @command = cmd.empty? ? '' : cmd.first.text
+    args = REXML::XPath.match(@exec, 'Arguments')
+    @arguments = args.empty? ? '' : args.first.text
     self
   end
 end

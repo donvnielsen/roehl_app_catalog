@@ -1,4 +1,4 @@
-require 'nokogiri'
+require 'rexml/document'
 require_relative '../app/models/task'
 require_relative '../classes/task_xml_action'
 
@@ -11,21 +11,18 @@ class TaskXmlFile
   end
 
   def parse_xml
-    @doc = Nokogiri::XML.parse(self.xml)
-    begin
-      task = @doc.xpath('xmlns:Task')
-    rescue Nokogiri::XML::XPath::SyntaxError
-      return
-    end
+    @doc = REXML::Document.new self.xml
+    task = REXML::XPath.match(@doc, 'Task').first
+    return if task.nil? || task.size.zero?
 
-    info = task.xpath('xmlns:RegistrationInfo')
-    @description = element_content(info, 'xmlns:Description')
-    @uri = element_content(info, 'xmlns:URI')
+    info = REXML::XPath.match(task, 'RegistrationInfo').first
+    @description = REXML::XPath.match(info, 'Description').first.text
+    @uri = REXML::XPath.match(info, 'URI').first.text
     @name = File.basename(@uri).tr('\\', '')
 
     @actions = []
-    execs = task.xpath('xmlns:Actions').xpath('xmlns:Exec')
-    return if execs.nil?
+    execs = REXML::XPath.match(task,'Actions/Exec')
+    return if execs.nil? || execs.size.zero?
     execs.each { |exec| @actions << TaskXMLAction.new(exec) }
   end
 
@@ -38,12 +35,5 @@ class TaskXmlFile
     self.xml = File.read(@fname).encode!('UTF-8', 'UTF-16', invalid: :replace)
     parse_xml
 
-  end
-
-  private
-
-  def element_content(nodeset,e)
-    node = nodeset.xpath(e).first
-    node.nil? ? '' : node.content
   end
 end
