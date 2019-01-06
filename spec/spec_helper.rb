@@ -19,6 +19,7 @@ SPEC_DATA_DIR = if OS.posix?
 TEST_SOLUTION_FILE = File.join(SPEC_DATA_DIR, 'spec_test_solution.sln')
 TEST_PROJECT_FILE  = File.join(SPEC_DATA_DIR, 'spec_test_project.csproj')
 TEST_TASK_FILE = File.join(SPEC_DATA_DIR, 'services_and_tasks', 'tasks', 'RTIViaPointVerification.xml')
+TEST_SERVICE_FILE = File.join(SPEC_DATA_DIR, 'services_and_tasks', 'services', 'AdobeARMService.xml')
 
 # SPEC_LOG_FILE = File.join(SPEC_DIR, 'logs', 'test.log')
 SPEC_LOG_FILE = StringIO.new
