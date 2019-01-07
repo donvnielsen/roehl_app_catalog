@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_03_010114) do
+ActiveRecord::Schema.define(version: 2019_01_07_180347) do
 
   create_table "application_types", force: :cascade do |t|
     t.string "name"
@@ -77,11 +77,20 @@ ActiveRecord::Schema.define(version: 2019_01_03_010114) do
 
   create_table "services", force: :cascade do |t|
     t.string "name"
+    t.string "displayname"
     t.string "pathname"
     t.string "description"
     t.string "xml", limit: 1048576
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "services_servers", force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "server_id"
+    t.index ["server_id"], name: "index_services_servers_on_server_id"
+    t.index ["service_id", "server_id"], name: "services servers unique_index", unique: true
+    t.index ["service_id"], name: "index_services_servers_on_service_id"
   end
 
   create_table "solutions", force: :cascade do |t|

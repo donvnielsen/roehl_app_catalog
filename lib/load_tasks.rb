@@ -2,7 +2,6 @@ require 'standalone_migrations'
 require 'ruby-progressbar'
 require 'sqlite3'
 require 'yaml'
-require 'nokogiri'
 require 'pp'
 
 require_relative '../config/environment'

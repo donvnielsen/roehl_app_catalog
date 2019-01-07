@@ -21,11 +21,13 @@ class ServiceXmlFile
     props = REXML::XPath.match(@doc, 'Objs/Obj/Props').first
     return if props.nil? || props.size.zero?
 
-    @name = props.elements["S[@N='Name']"].text
-    @displayname = props.elements["S[@N='DisplayName']"].text
-    @pathname = props.elements["S[@N='PathName']"].text.tr('"', '')
-    @description = props.elements["S[@N='Description']"].text
-
+    @name = get_property(props,'Name')
+    @displayname = get_property(props,'DisplayName')
+    @pathname = get_property(props,'PathName')
+    @description = get_property(props,'Description')
   end
 
+  def get_property(props,attr)
+    (p = props.elements["S[@N='#{attr}']"]).nil? ? '' : p.text
+  end
 end
