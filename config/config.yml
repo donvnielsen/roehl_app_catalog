@@ -10,6 +10,7 @@ dev: &dev
 development: *dev
 
 test: &test
+  hostname: //pc1932
   dbdir: db
   datadir: //pc1932/c$/Users/niedo/Documents/roehl_app_catalog_test_data
   buildmanagerdir: //pc1932/c$/code/branches/niedo2/shared/windowapps/buildmanager/data

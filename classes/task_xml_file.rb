@@ -16,14 +16,18 @@ class TaskXmlFile
     return if task.nil? || task.size.zero?
 
     info = REXML::XPath.match(task, 'RegistrationInfo').first
-    @description = REXML::XPath.match(info, 'Description').first.text
-    @uri = REXML::XPath.match(info, 'URI').first.text
+    @description = get_property(info, 'Description')
+    @uri = get_property(info, 'URI')
     @name = File.basename(@uri).tr('\\', '')
 
     @actions = []
     execs = REXML::XPath.match(task,'Actions/Exec')
     return if execs.nil? || execs.size.zero?
     execs.each { |exec| @actions << TaskXMLAction.new(exec) }
+  end
+
+  def get_property(task, path)
+    (t = REXML::XPath.match(task, path).first).nil? ? '' : t.text
   end
 
   def initialize(fname)

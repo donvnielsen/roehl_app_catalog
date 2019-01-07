@@ -20,8 +20,6 @@ ActiveRecord::Base.establish_connection(
 LOGGER.level = Logger::DEBUG
 LOGGER.info('Services')
 
-puts "Start #{Time.now}"
-
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 # for each task, create entry and parse actions

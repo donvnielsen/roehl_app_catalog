@@ -20,8 +20,6 @@ ActiveRecord::Base.establish_connection(
 LOGGER.level = Logger::DEBUG
 LOGGER.info('Tasks and Task Actions')
 
-puts "Start #{Time.now}"
-
 ActiveRecord::Migration.migrate(File.join(ROOT_DIR, CONFIG['dbdir'], 'migrate'))
 
 # for each task, create entry and parse actions
@@ -69,7 +67,6 @@ TaskAction.destroy_all
 
 # look for tasks folders in each server. if found, then process
 # each xml file in that folder, ensuring it is for a task.
-pp ENV['RAILS_ENV']
 Server.all.each do |server|
   next unless ['dev','test','mintdev'].include?(ENV['RAILS_ENV']) && server.name.include?('pc1932')
 

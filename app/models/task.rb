@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
 
   after_initialize :init
 
-  before_save :strip_columns, :downcase_columns
+  before_save :strip_columns, :downcase_columns, :remove_quotes
 
   ERR_INVALID_ID = 'id must reference existing task'
 
@@ -32,6 +32,10 @@ class Task < ActiveRecord::Base
   end
 
   def downcase_columns
+  end
+
+  def remove_quotes
+    self.uri.tr!('"', '')
   end
 
   def create_from_filename!(txf)

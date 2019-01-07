@@ -23,7 +23,7 @@ class ServiceXmlFile
 
     @name = get_property(props,'Name')
     @displayname = get_property(props,'DisplayName')
-    @pathname = get_property(props,'PathName')
+    @pathname = get_property(props,'PathName').tr('"', '')
     @description = get_property(props,'Description')
   end
 

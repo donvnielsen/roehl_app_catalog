@@ -28,5 +28,7 @@ system 'ruby -S load_projects.rb'
 LOGGER.info('load_projects complete')
 system 'ruby -S load_tasks.rb'
 LOGGER.info('load_tasks complete')
+system 'ruby -S load_services.rb'
+LOGGER.info('load_services complete')
 
 LOGGER.info('load_all end')
